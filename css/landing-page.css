@@ -1,0 +1,11 @@
+.featured-group {
+    clear:both;
+}
+
+.featured-item {
+    float: left;
+}
+
+.featured-item-image {
+    width: 300px;
+}
