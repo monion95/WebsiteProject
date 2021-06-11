@@ -1,0 +1,22 @@
+.cart-item-image {
+    width: 48px;
+}
+
+.cart-col-0 {
+    display: inline-block;
+    width: 150px;
+}
+
+.cart-col-1 {
+    display: inline-block;
+    width: 100px;
+}
+
+.cart-col-2 {
+    display: inline-block;
+    width: 80px;
+}
+
+.cart-item {
+    margin: 10px;
+}
