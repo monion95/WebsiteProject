@@ -1,0 +1,71 @@
+
+
+article {
+    display: grid;
+    grid-template-columns: 50px 200px auto 50px;
+    grid-template-rows: 100px 50px auto 100px;
+    grid-template-areas: "header header  header header" ". nav     nav    ." ". left    content." ". footer  footer .";
+}
+body{
+    margin:0% 0% 0% 0%;
+}
+header {
+    grid-area: header;
+    background-color: #e74615;
+}
+
+nav {
+    background-color: rgb(129, 126, 125);
+    grid-area: nav;
+}
+
+left {
+    height: 1000px;
+    background-color: rgb(235, 235, 225);
+    grid-area: left;
+}
+
+section {
+    height: 1000px;
+    background-color: rgb(255, 255, 255);
+    grid-area: content;
+}
+
+footer {
+    background-color: LightBlue;
+    grid-area: footer;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 500px;
+    grid-template-areas: "logo signin  cart search" ;
+}
+
+naviHori {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111111;
+}
+
+body {
+    background-color: #f8f6f5;
+}
