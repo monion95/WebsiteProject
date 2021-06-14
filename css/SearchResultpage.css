@@ -1,17 +1,17 @@
-
+/* 
 
 article {
     display: grid;
-    grid-template-columns: 50px 200px auto 50px;
+    grid-template-columns: 200px  auto 200px;
     grid-template-rows: 100px 50px auto 100px;
-    grid-template-areas: "header header  header header" ". nav     nav    ." ". left    content." ". footer  footer .";
+    grid-template-areas: "header header  header" "nav nav  nav" ". content  ." ". footer  .";
 }
 body{
     margin:0% 0% 0% 0%;
 }
 header {
     grid-area: header;
-    background-color: #e74615;
+    background-color: #d1522b;
 }
 
 nav {
@@ -19,17 +19,16 @@ nav {
     grid-area: nav;
 }
 
-left {
-    height: 1000px;
+left1 {
+   
     background-color: rgb(235, 235, 225);
     grid-area: left;
 }
-
-section {
-    height: 1000px;
-    background-color: rgb(255, 255, 255);
-    grid-area: content;
+right1 {  
+    background-color: rgb(235, 235, 225);
+    grid-area: right;
 }
+
 
 footer {
     background-color: LightBlue;
@@ -38,11 +37,16 @@ footer {
 
 header{
     display: grid;
-    grid-template-columns: 100px 100px 100px 500px;
-    grid-template-areas: "logo signin  cart search" ;
-}
 
-naviHori {
+    grid-template-columns: 100px auto 150px 150px ;
+    grid-template-areas: "logo search login cart" ;
+    padding: 20px 20px 20px 20px ;
+    align-items: center;
+}
+logo,search,login,cart{
+    display:inline-block
+}
+navi {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -60,6 +64,7 @@ li a {
     text-align: center;
     padding: 16px;
     text-decoration: none;
+    width: 80px;
 }
 
 li a:hover {
@@ -68,4 +73,16 @@ li a:hover {
 
 body {
     background-color: #f8f6f5;
+}
+
+
+#quickSearch{
+    height: 40px;
+    width: 300px;
+} */
+
+section {
+    display: grid;
+    grid-template-columns:100px auto;
+    grid-template-areas:"left right";
 }
