@@ -8,29 +8,33 @@
     </head>
     <body>
         <header>
-            
-             <img id="navlogo" src="image/logo/logo.png" alt="Logo">
-                <div id="searchBar">
-                    <form>
-                        <input type="text" id="quickSearch" name="q" placeholder="What are you looking for?">
-                        <a href="SearchResultpage.html"><img class="nav-icon" src="image/icons/search.svg" alt="search"></i>
-                        </a>
-                    </form>
-                </div>
-                <div class="header-nav-item">
-                    <a href="login.html">
+            <!--Navagation Bar, including a menu to select product pages-->
+            <img id="navlogo" src="image/logo/logo.png" alt="Logo">
+            <div id="searchBar">
+                <form>
+                    <input type="text" id="quickSearch" name="q" placeholder="What are you looking for?">
+                    <a href="SearchResultpage.html"><img class="nav-icon" src="image/icons/search.svg" alt="search"></i>
+                    </a>
+                </form>
+            </div>
+            <div class="header-nav-item">
+                <form action="login.html">
+                    
+                    <button type="submit" id = "login">
                         <img class="nav-icon" src="image/icons/box-arrow-in-right.svg" alt="Login">
-                        <span>Login</span>
-                    </a>
-                </div>
+                        Login
+                    </button>
+                </form>
+            </div>
+            <div class="header-nav-item">
                 <div class="header-nav-item">
-                    <a href="cart.html">
-                        <img class="nav-icon" src="image/icons/cart.svg" alt="Cart">
-                        <span>My Cart</span>
-                    </a>
-                </div>
-
-
+                    <form action="cart.html">
+                        <button type="submit" id = "cart">
+                            <img class="nav-icon" src="image/icons/cart.svg" alt="Cart">
+                            My cart
+                        </button>
+                    </form>
+            </div>
         </header>
         <nav>
             <div>
