@@ -1,9 +1,11 @@
-.featured-group {
-    clear:both;
+#featured {
+    display: flex;
+    flex-direction: column;
 }
-
-.featured-item {
-    float: left;
+.featured-group-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .featured-item-image {
