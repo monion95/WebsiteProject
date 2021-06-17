@@ -1,10 +1,11 @@
 #navlogo {
-	width: 60px;
-    float: center;
+	width: 300x;
+    height: 100px;
 }
 
 #searchBar{
     clear: both;
+    text-align: center;
 }
 
 .header-nav-item {
