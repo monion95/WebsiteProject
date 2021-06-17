@@ -78,7 +78,6 @@ header{
     display: grid;
     grid-template-columns: 100px auto 150px 150px ;
     grid-template-areas: "logo search login cart" ;
-    padding: 20px 20px 20px 20px ;
     align-items: center;
 }
 logo,search,login,cart{
