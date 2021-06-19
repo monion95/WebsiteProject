@@ -9,37 +9,47 @@
     <body>
         <header>
             <!--Navagation Bar, including a menu to select product pages-->
-            <a href="index.html"><img id="navlogo" src="image/logo/logo.png" alt="Logo"></a>
-            <div id="searchBar">
-                <form>
-                    <input type="text" id="quickSearch" name="q" placeholder="What are you looking for?">
-                    <a href="SearchResultpage.html"><img class="nav-icon" src="image/icons/search.svg" alt="search"></i>
-                    </a>
-                </form>
+            <div class="main-logo page-header-item">
+                <a href="index.html">
+                    <img id="navlogo" src="image/logo/logo.png" alt="Logo">
+                </a>
             </div>
-            <div class="header-nav-item">
-                <form action="login.html">
-                    
-                    <button type="submit" id = "login">
-                        <img class="nav-icon" src="image/icons/box-arrow-in-right.svg" alt="Login">
-                        Login
-                    </button>
-                </form>
-            </div>
-            <div class="header-nav-item">
-                <div class="header-nav-item">
-                    <form action="cart.html">
-                        <button type="submit" id = "cart">
-                            <img class="nav-icon" src="image/icons/cart.svg" alt="Cart">
-                            My cart
-                        </button>
+            <div class="page-header-item">
+                <div id="searchBar">
+                    <form>
+                        <input type="text" id="quickSearch" name="q" placeholder="What are you looking for?">
+                        <a href="SearchResultpage.html"><img class="nav-icon" src="image/icons/search.svg" alt="search"></i>
+                        </a>
                     </form>
+                </div>
+            </div>
+            <div class="page-header-item">
+                <a href="login.html" class="page-header-button">
+                    <img class="nav-icon" src="image/icons/box-arrow-in-right.svg" alt="Login">
+                    Login
+                </a>
+            </div>
+            <div class="page-header-item">
+                <a href="cart.html" class="page-header-button">
+                    <img class="nav-icon" src="image/icons/cart.svg" alt="Cart">
+                    My cart
+                </a>
             </div>
         </header>
+        <nav>
+            <div id = menu>
+                <a href="ps4.html">PS4</a>
+                <a href="ps5.html">PS5</a>
+                <a href="switch.html">Switch</a>
+                <a href="console.html">Console</a>
+            </div>
+        </nav>
 
 
         <main>
-            <section>
+            <section class="New Release">
+                <h1>New Release</h1>
+                
             </section>
             <aside>
             </aside>
