@@ -11,13 +11,12 @@ body > header {
     background-color: #d1522b;
     position: sticky;
     top: 0;
-    width: 100%;
     display: flex;
     justify-content: center;
 }
 
 .page-header-content, body > nav, body > main, body > footer {
-    width: 1200px;
+    width: 1000px;
 }
 
 
