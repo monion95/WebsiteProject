@@ -6,17 +6,23 @@ body {
     background-color: white;
 }
 
+body > header {
+    background-color: #d1522b;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
-body > header, body > nav, body > main, body > footer {
+.page-header-content, body > nav, body > main, body > footer {
     width: 1200px;
 }
 
-body > header {
+
+.page-header-content {
     display: flex;
-    background-color: #d1522b;
     align-items: center;
-    position: sticky;
-    top: 0;
 }
 
 body > nav{
@@ -24,7 +30,12 @@ body > nav{
 }
 
 body > footer {
+    display: block;
+    box-sizing: content-box;
+    width: 1180px;
     background-color: LightBlue;
+    background-clip: padding-box;
+    padding: 10px;
 }
 
 body > main {
