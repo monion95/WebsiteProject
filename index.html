@@ -2,52 +2,54 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>8285 Game Store</title>
+        <title>Eager Gamers</title>
         <link rel="stylesheet" href="css/style.css" type="text/css" />
         <link rel="stylesheet" href="css/landing-page.css" type="text/css" />
     </head>
     <body>
         <header>
             <!--Navagation Bar, including a menu to select product pages-->
-            <a href="index.html"><img id="navlogo" src="image/logo/logo.png" alt="Logo"></a>
-            <div id="searchBar">
-                <form>
-                    <input type="text" id="quickSearch" name="q" placeholder="What are you looking for?">
-                    <a href="SearchResultpage.html"><img class="nav-icon" src="image/icons/search.svg" alt="search"></i>
-                    </a>
-                </form>
+            <div class="main-logo page-header-item">
+                <a href="index.html">
+                    <img id="navlogo" src="image/logo/logo.png" alt="Logo">
+                </a>
             </div>
-            <div class="header-nav-item">
-                <form action="login.html">
-                    
-                    <button type="submit" id = "login">
-                        <img class="nav-icon" src="image/icons/box-arrow-in-right.svg" alt="Login">
-                        Login
-                    </button>
-                </form>
-            </div>
-            <div class="header-nav-item">
-                <div class="header-nav-item">
-                    <form action="cart.html">
-                        <button type="submit" id = "cart">
-                            <img class="nav-icon" src="image/icons/cart.svg" alt="Cart">
-                            My cart
-                        </button>
+            <div class="page-header-item">
+                <div id="searchBar">
+                    <form>
+                        <input type="text" id="quickSearch" name="q" placeholder="What are you looking for?">
+                        <a href="SearchResultpage.html"><img class="nav-icon" src="image/icons/search.svg" alt="search"></i>
+                        </a>
                     </form>
+                </div>
+            </div>
+            <div class="page-header-item">
+                <a href="login.html" class="page-header-button">
+                    <img class="nav-icon" src="image/icons/box-arrow-in-right.svg" alt="Login">
+                    Login
+                </a>
+            </div>
+            <div class="page-header-item">
+                <a href="login.html" class="page-header-button">
+                    <img class="nav-icon" src="image/icons/cart.svg" alt="Cart">
+                    My cart
+                </a>
             </div>
         </header>
         <nav>
-            <div>
-                <ul id="menu">
-                    <li><a href="ps4.html">PS4</a></li>
-                    <li><a href="ps5.html">PS5</a></li>
-                    <li><a href="switch.html">Switch</a></li>
-                    <li><a href="console.html">Console</a></li>
-                </ul>
+            <div id = menu>
+                <a href="ps4.html">PS4</a>
+                <a href="ps5.html">PS5</a>
+                <a href="switch.html">Switch</a>
+                <a href="console.html">Console</a>
             </div>
         </nav>
-
         <main>
+            <section id="banner">
+                <a href="2k21.html">
+                    <img class="banner-image" src="image/banners/battle-field.jpg" alt="battle-field">
+                </a>
+            </section>
             <section id="featured">
                 <section class="featured-group">
                     <div class="featured-group-title">PS4 Best Sellers</div>
@@ -57,65 +59,65 @@
                                 <img class="featured-item-image" src="image/ps4/2k21.jpg" alt="2k21">
                                 <p class="featured-item-title">NBA 2K21</p>
                             </a>
-                            <div class="featured-item-buy-buttom">
-                                <i class="bi bi-cart-plus"></i>
+                            <button class="featured-item-buy-buttom">
+                                <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
                                 <span class="featured-item-price">$79.99</span>
-                            </div>
+                            </button>
                         </div>
                         <div class="featured-item">
-                            <a href="ps4/2k21">
+                            <a href="2k21.html">
                                 <img class="featured-item-image" src="image/ps4/2k21.jpg" alt="2k21">
                                 <p class="featured-item-title">NBA 2K21</p>
                             </a>
-                            <div class="featured-item-buy-buttom">
-                                <i class="bi bi-cart-plus"></i>
+                            <button class="featured-item-buy-buttom">
+                                <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
                                 <span class="featured-item-price">$79.99</span>
-                            </div>
+                            </button>
                         </div>
                         <div class="featured-item">
-                            <a href="ps4/2k21">
+                            <a href="2k21.html">
                                 <img class="featured-item-image" src="image/ps4/2k21.jpg" alt="2k21">
                                 <p class="featured-item-title">NBA 2K21</p>
                             </a>
-                            <div class="featured-item-buy-buttom">
-                                <i class="bi bi-cart-plus"></i>
+                            <button class="featured-item-buy-buttom">
+                                <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
                                 <span class="featured-item-price">$79.99</span>
-                            </div>
+                            </button>
                         </div>
                     </div>
                 </section>
-                                <section class="featured-group">
+                <section class="featured-group">
                     <div class="featured-group-title">PS5 Best Sellers</div>
                     <div class="featured-group-content">
                         <div class="featured-item">
-                            <a href="ps4/2k21">
+                            <a href="2k21.html">
                                 <img class="featured-item-image" src="image/ps4/2k21.jpg" alt="2k21">
                                 <p class="featured-item-title">NBA 2K21</p>
                             </a>
-                            <div class="featured-item-buy-buttom">
-                                <i class="bi bi-cart-plus"></i>
+                            <button class="featured-item-buy-buttom">
+                                <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
                                 <span class="featured-item-price">$79.99</span>
-                            </div>
+                            </button>
                         </div>
                         <div class="featured-item">
-                            <a href="ps4/2k21">
+                            <a href="2k21.html">
                                 <img class="featured-item-image" src="image/ps4/2k21.jpg" alt="2k21">
                                 <p class="featured-item-title">NBA 2K21</p>
                             </a>
-                            <div class="featured-item-buy-buttom">
-                                <i class="bi bi-cart-plus"></i>
+                            <button class="featured-item-buy-buttom">
+                                <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
                                 <span class="featured-item-price">$79.99</span>
-                            </div>
+                            </button>
                         </div>
                         <div class="featured-item">
-                            <a href="ps4/2k21">
+                            <a href="2k21.html">
                                 <img class="featured-item-image" src="image/ps4/2k21.jpg" alt="2k21">
                                 <p class="featured-item-title">NBA 2K21</p>
                             </a>
-                            <div class="featured-item-buy-buttom">
-                                <i class="bi bi-cart-plus"></i>
+                            <button class="featured-item-buy-buttom">
+                                <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
                                 <span class="featured-item-price">$79.99</span>
-                            </div>
+                            </button>
                         </div>
                     </div>
                 </section>
@@ -123,34 +125,34 @@
                     <div class="featured-group-title">Switch Best Sellers</div>
                     <div class="featured-group-content">
                         <div class="featured-item">
-                            <a href="ps4/2k21">
+                            <a href="2k21.html">
                                 <img class="featured-item-image" src="image/ps4/2k21.jpg" alt="2k21">
                                 <p class="featured-item-title">NBA 2K21</p>
                             </a>
-                            <div class="featured-item-buy-buttom">
-                                <i class="bi bi-cart-plus"></i>
+                            <button class="featured-item-buy-buttom">
+                                <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
                                 <span class="featured-item-price">$79.99</span>
-                            </div>
+                            </button>
                         </div>
                         <div class="featured-item">
-                            <a href="ps4/2k21">
+                            <a href="2k21.html">
                                 <img class="featured-item-image" src="image/ps4/2k21.jpg" alt="2k21">
                                 <p class="featured-item-title">NBA 2K21</p>
                             </a>
-                            <div class="featured-item-buy-buttom">
-                                <i class="bi bi-cart-plus"></i>
+                            <button class="featured-item-buy-buttom">
+                                <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
                                 <span class="featured-item-price">$79.99</span>
-                            </div>
+                            </button>
                         </div>
                         <div class="featured-item">
-                            <a href="ps4/2k21">
+                            <a href="2k21.html">
                                 <img class="featured-item-image" src="image/ps4/2k21.jpg" alt="2k21">
                                 <p class="featured-item-title">NBA 2K21</p>
                             </a>
-                            <div class="featured-item-buy-buttom">
-                                <i class="bi bi-cart-plus"></i>
+                            <button class="featured-item-buy-buttom">
+                                <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
                                 <span class="featured-item-price">$79.99</span>
-                            </div>
+                            </button>
                         </div>
                     </div>
                 </section>
@@ -159,6 +161,7 @@
             </aside>
         </main>
         <footer>
+            Footer: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </footer>
     </body>
 </html>

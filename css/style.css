@@ -1,98 +1,74 @@
-#navlogo {
-	width: 300x;
-    height: 100px;
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
 }
 
-#searchBar{
-    clear: both;
-    text-align: center;
+
+body > header, body > nav, body > main, body > footer {
+    width: 1200px;
 }
 
-.header-nav-item {
-    float: top;
+body > header {
+    display: flex;
+    background-color: #d1522b;
+    align-items: center;
 }
 
-#menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;   
-
+body > nav{
+    background-color: #333333;
 }
-#login,#cart{
-    background-color:#d1522b;
+
+body > footer {
+    background-color: LightBlue;
+}
+
+body > main {
+    background-color: #e8e8e8;
+}
+
+.page-header-item {
+    display: block;
+}
+
+.page-header-button {
     border: none;
     color: black;
     padding: 12px 14px;
     font-size: 20px;
     cursor: pointer;
+    text-decoration: none;
+    font-weight: 400;
 }
 
-  
-article {
-    display: grid;
-    grid-template-columns: 200px  auto 200px;
-    grid-template-rows: 100px 50px auto 100px;
-    grid-template-areas: "header header  header" "nav nav  nav" ". content  ." ". footer  .";
-}
-body{
-    margin:0% 0% 0% 0%;
-}
-header {
-    grid-area: header;
-    background-color: #d1522b;
+.page-header-button:hover {
+    background-color: #682915;
 }
 
-nav {
-    background-color: rgb(129, 126, 125);
-    grid-area: nav;
+.main-logo {
+    align-self: flex-start;
+    flex: 1;
 }
 
-left1 {
-   
-    background-color: rgb(235, 235, 225);
-    grid-area: left;
-}
-right1 {  
-    background-color: rgb(235, 235, 225);
-    grid-area: right;
+#navlogo {
+	width: 300x;
+    height: 100px;
 }
 
-section {
-    height: 1000px;
-    background-color: rgb(255, 255, 255);
-    grid-area: content;
-
+#quickSearch{
+    height: 40px;
+    width: 300px;
 }
 
-footer {
-    background-color: LightBlue;
-    grid-area: footer;
-}
-
-header{
-    display: grid;
-    grid-template-columns: 100px auto 150px 150px ;
-    grid-template-areas: "logo search login cart" ;
-    align-items: center;
-}
-logo,search,login,cart{
-    display:inline-block;
-    margin-top: auto;
-}
-navi {
-    list-style-type: none;
+#menu {
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: #333333;
+    display: flex;
 }
 
-li {
-    float: left;
-}
-
-li a {
+#menu > a {
     display: block;
     color: white;
     text-align: center;
@@ -101,16 +77,14 @@ li a {
     width: 80px;
 }
 
-li a:hover {
+#menu a:hover {
     background-color: #111111;
 }
 
-body {
-    background-color: #f8f6f5;
+#banner {
+    margin-top: 10px;
 }
 
-
-#quickSearch{
-    height: 40px;
-    width: 300px;
+.banner-image {
+    max-width: 100%;
 }
