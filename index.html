@@ -1,173 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Eager Gamers</title>
-        <link rel="stylesheet" href="css/style.css" type="text/css" />
-        <link rel="stylesheet" href="css/landing-page.css" type="text/css" />
-    </head>
-    <body>
-        <!--Navagation Bar, including a menu to select product pages-->
-        <header>
-            <div class="page-header-content">
-                <div class="main-logo page-header-item">
-                    <a href="index.html">
-                        <img id="navlogo" src="image/logo/logo.png" alt="Logo">
+<head>
+    <meta charset="UTF-8">
+    <title>Eager Gamers</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="css/landing-page.css" type="text/css"/>
+</head>
+<body>
+<!--Navagation Bar, including a menu to select product pages-->
+<header>
+    <div class="page-header-content">
+        <div class="main-logo page-header-item">
+            <a href="index.html">
+                <img id="navlogo" src="image/logo/logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="page-header-item">
+            <div id="searchBar">
+                <form>
+                    <input type="text" id="quickSearch" name="q" placeholder="What are you looking for?">
+                    <a href="SearchResultpage.html">
+                        <img class="nav-icon" src="image/icons/search.svg" alt="search">
+                        </i>
                     </a>
-                </div>
-                <div class="page-header-item">
-                    <div id="searchBar">
-                        <form>
-                            <input type="text" id="quickSearch" name="q" placeholder="What are you looking for?">
-                            <a href="SearchResultpage.html"><img class="nav-icon" src="image/icons/search.svg" alt="search"></i>
-                            </a>
-                        </form>
-                    </div>
-                </div>
-                <div class="page-header-item">
-                    <a href="login.html" class="page-header-button">
-                        <img class="nav-icon" src="image/icons/box-arrow-in-right.svg" alt="Login">
-                        Login
+                </form>
+            </div>
+        </div>
+        <div class="page-header-item">
+            <a href="login.html" class="page-header-button">
+                <img class="nav-icon" src="image/icons/box-arrow-in-right.svg" alt="Login">
+                Login
+            </a>
+        </div>
+        <div class="page-header-item">
+            <a href="cart.html" class="page-header-button">
+                <img class="nav-icon" src="image/icons/cart.svg" alt="Cart">
+                My cart
+            </a>
+        </div>
+    </div>
+</header>
+<nav>
+    <div id="menu">
+        <a href="ps4.html">PS4</a>
+        <a href="ps5.html">PS5</a>
+        <a href="switch.html">Switch</a>
+        <a href="console.html">Console</a>
+    </div>
+</nav>
+<!--main content of the page-->
+<main>
+    <!--page banner-->
+    <section id="banner">
+        <a href="products/2k21.html">
+            <img class="banner-image" src="image/banners/battle-field.jpg" alt="battle-field">
+        </a>
+    </section>
+    <!--featured product lists-->
+    <section id="featured">
+        <section class="featured-group">
+            <div class="featured-group-title">PS4 Best Sellers</div>
+            <div class="featured-group-content">
+                <div class="featured-item">
+                    <a href="products/ps4/2k21.html">
+                        <img class="featured-item-image" src="image/ps4/2k21.jpg" alt="2k21">
+                        <p class="featured-item-title">NBA 2K21</p>
                     </a>
+                    <button class="featured-item-buy-buttom">
+                        <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
+                        <span class="featured-item-price">$79.99</span>
+                    </button>
                 </div>
-                <div class="page-header-item">
-                    <a href="cart.html" class="page-header-button">
-                        <img class="nav-icon" src="image/icons/cart.svg" alt="Cart">
-                        My cart
+                <div class="featured-item">
+                    <a href="products/ps4/Avengers.html">
+                        <img class="featured-item-image" src="image/ps4/Avengers.jpg" alt="Avengers">
+                        <p class="featured-item-title">Avengers</p>
                     </a>
+                    <button class="featured-item-buy-buttom">
+                        <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
+                        <span class="featured-item-price">$79.99</span>
+                    </button>
+                </div>
+                <div class="featured-item">
+                    <a href="products/ps4/Cyberpunk.html">
+                        <img class="featured-item-image" src="image/ps4/Cyberpunk.jpg" alt="Cyberpunk">
+                        <p class="featured-item-title">Cyberpunk</p>
+                    </a>
+                    <button class="featured-item-buy-buttom">
+                        <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
+                        <span class="featured-item-price">$79.99</span>
+                    </button>
                 </div>
             </div>
-        </header>
-        <nav>
-            <div id = menu>
-                <a href="ps4.html">PS4</a>
-                <a href="ps5.html">PS5</a>
-                <a href="switch.html">Switch</a>
-                <a href="console.html">Console</a>
+        </section>
+        <section class="featured-group">
+            <div class="featured-group-title">PS5 Best Sellers</div>
+            <div class="featured-group-content">
+                <div class="featured-item">
+                    <a href="products/ps5/rims.html">
+                        <img class="featured-item-image" src="image/ps5/rims.jpg" alt="rims">
+                        <p class="featured-item-title">rims</p>
+                    </a>
+                    <button class="featured-item-buy-buttom">
+                        <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
+                        <span class="featured-item-price">$79.99</span>
+                    </button>
+                </div>
+                <div class="featured-item">
+                    <a href="products/ps5/sniper2.html">
+                        <img class="featured-item-image" src="image/ps5/sniper2.jpg" alt="sniper2">
+                        <p class="featured-item-title">sniper2</p>
+                    </a>
+                    <button class="featured-item-buy-buttom">
+                        <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
+                        <span class="featured-item-price">$79.99</span>
+                    </button>
+                </div>
+                <div class="featured-item">
+                    <a href="products/ps5/wrc10.html">
+                        <img class="featured-item-image" src="image/ps5/wrc10.jpg" alt="wrc10">
+                        <p class="featured-item-title">wrc10</p>
+                    </a>
+                    <button class="featured-item-buy-buttom">
+                        <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
+                        <span class="featured-item-price">$79.99</span>
+                    </button>
+                </div>
             </div>
-        </nav>
-        <main>
-            <section id="banner">
-                <a href="products/2k21.html">
-                    <img class="banner-image" src="image/banners/battle-field.jpg" alt="battle-field">
-                </a>
-            </section>
-            <section id="featured">
-                <section class="featured-group">
-                    <div class="featured-group-title">PS4 Best Sellers</div>
-                    <div class="featured-group-content">
-                        <div class="featured-item">
-                            <a href="products/2k21.html">
-                                <img class="featured-item-image" src="image/ps4/2k21.jpg" alt="2k21">
-                                <p class="featured-item-title">NBA 2K21</p>
-                            </a>
-                            <button class="featured-item-buy-buttom">
-                                <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
-                                <span class="featured-item-price">$79.99</span>
-                            </button>
-                        </div>
-                        <div class="featured-item">
-                            <a href="products/2k21.html">
-                                <img class="featured-item-image" src="image/ps4/2k21.jpg" alt="2k21">
-                                <p class="featured-item-title">NBA 2K21</p>
-                            </a>
-                            <button class="featured-item-buy-buttom">
-                                <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
-                                <span class="featured-item-price">$79.99</span>
-                            </button>
-                        </div>
-                        <div class="featured-item">
-                            <a href="2k21.html">
-                                <img class="featured-item-image" src="image/ps4/2k21.jpg" alt="2k21">
-                                <p class="featured-item-title">NBA 2K21</p>
-                            </a>
-                            <button class="featured-item-buy-buttom">
-                                <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
-                                <span class="featured-item-price">$79.99</span>
-                            </button>
-                        </div>
-                    </div>
-                </section>
-                <section class="featured-group">
-                    <div class="featured-group-title">PS5 Best Sellers</div>
-                    <div class="featured-group-content">
-                        <div class="featured-item">
-                            <a href="2k21.html">
-                                <img class="featured-item-image" src="image/ps4/2k21.jpg" alt="2k21">
-                                <p class="featured-item-title">NBA 2K21</p>
-                            </a>
-                            <button class="featured-item-buy-buttom">
-                                <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
-                                <span class="featured-item-price">$79.99</span>
-                            </button>
-                        </div>
-                        <div class="featured-item">
-                            <a href="2k21.html">
-                                <img class="featured-item-image" src="image/ps4/2k21.jpg" alt="2k21">
-                                <p class="featured-item-title">NBA 2K21</p>
-                            </a>
-                            <button class="featured-item-buy-buttom">
-                                <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
-                                <span class="featured-item-price">$79.99</span>
-                            </button>
-                        </div>
-                        <div class="featured-item">
-                            <a href="2k21.html">
-                                <img class="featured-item-image" src="image/ps4/2k21.jpg" alt="2k21">
-                                <p class="featured-item-title">NBA 2K21</p>
-                            </a>
-                            <button class="featured-item-buy-buttom">
-                                <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
-                                <span class="featured-item-price">$79.99</span>
-                            </button>
-                        </div>
-                    </div>
-                </section>
-                <section class="featured-group">
-                    <div class="featured-group-title">Switch Best Sellers</div>
-                    <div class="featured-group-content">
-                        <div class="featured-item">
-                            <a href="2k21.html">
-                                <img class="featured-item-image" src="image/ps4/2k21.jpg" alt="2k21">
-                                <p class="featured-item-title">NBA 2K21</p>
-                            </a>
-                            <button class="featured-item-buy-buttom">
-                                <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
-                                <span class="featured-item-price">$79.99</span>
-                            </button>
-                        </div>
-                        <div class="featured-item">
-                            <a href="2k21.html">
-                                <img class="featured-item-image" src="image/ps4/2k21.jpg" alt="2k21">
-                                <p class="featured-item-title">NBA 2K21</p>
-                            </a>
-                            <button class="featured-item-buy-buttom">
-                                <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
-                                <span class="featured-item-price">$79.99</span>
-                            </button>
-                        </div>
-                        <div class="featured-item">
-                            <a href="2k21.html">
-                                <img class="featured-item-image" src="image/ps4/2k21.jpg" alt="2k21">
-                                <p class="featured-item-title">NBA 2K21</p>
-                            </a>
-                            <button class="featured-item-buy-buttom">
-                                <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
-                                <span class="featured-item-price">$79.99</span>
-                            </button>
-                        </div>
-                    </div>
-                </section>
-            </section>
-            <aside>
-            </aside>
-        </main>
-        <hr>
-        <footer>
-            <div class="page-footer">
-                <a href="about.html">About</a>
-                <a href="feedback.html">Feedback</a>
+        </section>
+        <section class="featured-group">
+            <div class="featured-group-title">Switch Best Sellers</div>
+            <div class="featured-group-content">
+                <div class="featured-item">
+                    <a href="products/switch/mk8.html">
+                        <img class="featured-item-image" src="image/switch/mk8.jpg" alt="mk8">
+                        <p class="featured-item-title">mk8</p>
+                    </a>
+                    <button class="featured-item-buy-buttom">
+                        <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
+                        <span class="featured-item-price">$79.99</span>
+                    </button>
+                </div>
+                <div class="featured-item">
+                    <a href="products/switch/modyssey.html">
+                        <img class="featured-item-image" src="image/switch/modyssey.jpg" alt="modyssey">
+                        <p class="featured-item-title">modyssey</p>
+                    </a>
+                    <button class="featured-item-buy-buttom">
+                        <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
+                        <span class="featured-item-price">$79.99</span>
+                    </button>
+                </div>
+                <div class="featured-item">
+                    <a href="products/switch/PokemonS.html">
+                        <img class="featured-item-image" src="image/switch/PokemonS.jpg" alt="PokemonS">
+                        <p class="featured-item-title">PokemonS</p>
+                    </a>
+                    <button class="featured-item-buy-buttom">
+                        <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
+                        <span class="featured-item-price">$79.99</span>
+                    </button>
+                </div>
             </div>
-        </footer>
-    </body>
+        </section>
+
+    </section>
+    <aside>
+    </aside>
+</main>
+<hr>
+<!--extra site info-->
+<footer>
+    <div class="page-footer">
+        <a href="about.html">About</a>
+        <a href="feedback.html">Feedback</a>
+    </div>
+</footer>
+</body>
 </html>

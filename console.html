@@ -1,66 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Consoles</title>
-        <link rel="stylesheet" href="css/style.css" type="text/css" />
-        <link rel="stylesheet" href="css/ProductPage.css" type="text/css" />
-    </head>
-    <body>
-       <!--Navagation Bar, including a menu to select product pages-->
-       <header>
-        <div class="page-header-content">
-            <div class="main-logo page-header-item">
-                <a href="index.html">
-                    <img id="navlogo" src="image/logo/logo.png" alt="Logo">
-                </a>
+<head>
+    <meta charset="UTF-8">
+    <title>Eager Gamers</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="css/landing-page.css" type="text/css"/>
+</head>
+<body>
+<!--Navagation Bar, including a menu to select product pages-->
+<header>
+    <div class="page-header-content">
+        <div class="main-logo page-header-item">
+            <a href="index.html">
+                <img id="navlogo" src="image/logo/logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="page-header-item">
+            <div id="searchBar">
+                <form>
+                    <input type="text" id="quickSearch" name="q" placeholder="What are you looking for?">
+                    <a href="SearchResultpage.html">
+                        <img class="nav-icon" src="image/icons/search.svg" alt="search">
+                        </i>
+                    </a>
+                </form>
             </div>
-            <div class="page-header-item">
-                <div id="searchBar">
-                    <form>
-                        <input type="text" id="quickSearch" name="q" placeholder="What are you looking for?">
-                        <a href="SearchResultpage.html"><img class="nav-icon" src="image/icons/search.svg" alt="search"></i>
-                        </a>
-                    </form>
+        </div>
+        <div class="page-header-item">
+            <a href="login.html" class="page-header-button">
+                <img class="nav-icon" src="image/icons/box-arrow-in-right.svg" alt="Login">
+                Login
+            </a>
+        </div>
+        <div class="page-header-item">
+            <a href="cart.html" class="page-header-button">
+                <img class="nav-icon" src="image/icons/cart.svg" alt="Cart">
+                My cart
+            </a>
+        </div>
+    </div>
+</header>
+<nav>
+    <div id="menu">
+        <a href="ps4.html">PS4</a>
+        <a href="ps5.html">PS5</a>
+        <a href="switch.html">Switch</a>
+        <a href="console.html">Console</a>
+    </div>
+</nav>
+<!--main content of the page-->
+<main>
+    <!--page banner-->
+    <section id="banner">
+        <a href="console.html">
+            <img class="banner-image" src="image/banners/digital.jpg" alt="battle-field">
+        </a>
+    </section>
+    <!--featured product lists-->
+    <section id="featured">
+        <section class="featured-group">
+            <div class="featured-group-title">Consoles</div>
+            <div class="featured-group-content">
+                <div class="featured-item">
+                    <a href="products/consoles/ps4slim.html">
+                        <img class="featured-item-image" src="image/consoles/ps4slim.jpg" alt="ps4slim">
+                        <p class="featured-item-title">ps4slim</p>
+                    </a>
+                    <button class="featured-item-buy-buttom">
+                        <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
+                        <span class="featured-item-price">$79.99</span>
+                    </button>
+                </div>
+                <div class="featured-item">
+                    <a href="products/consoles/ps5.html">
+                        <img class="featured-item-image" src="image/consoles/ps5.jpg" alt="ps5">
+                        <p class="featured-item-title">ps5</p>
+                    </a>
+                    <button class="featured-item-buy-buttom">
+                        <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
+                        <span class="featured-item-price">$79.99</span>
+                    </button>
+                </div>
+                <div class="featured-item">
+                    <a href="products/consoles/switch.html">
+                        <img class="featured-item-image" src="image/consoles/switch.jpg" alt="switch">
+                        <p class="featured-item-title">switch</p>
+                    </a>
+                    <button class="featured-item-buy-buttom">
+                        <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
+                        <span class="featured-item-price">$79.99</span>
+                    </button>
                 </div>
             </div>
-            <div class="page-header-item">
-                <a href="login.html" class="page-header-button">
-                    <img class="nav-icon" src="image/icons/box-arrow-in-right.svg" alt="Login">
-                    Login
-                </a>
-            </div>
-            <div class="page-header-item">
-                <a href="cart.html" class="page-header-button">
-                    <img class="nav-icon" src="image/icons/cart.svg" alt="Cart">
-                    My cart
-                </a>
-            </div>
-        </div>
-    </header>
-    <nav>
-        <div id = menu>
-            <a href="ps4.html">PS4</a>
-            <a href="ps5.html">PS5</a>
-            <a href="switch.html">Switch</a>
-            <a href="console.html">Console</a>
-        </div>
-    </nav>
-
-
-        <main>
-            <section class="New Release">
-                <h1>New Release</h1>
-                
-            </section>
-            <aside>
-            </aside>
-        </main>
-        <footer>
-            <div class="page-footer">
-                <a href="about.html">About</a>
-                <a href="feedback.html">Feedback</a>
-            </div>
-        </footer>
-    </body>
+        </section>
+    </section>
+    <aside>
+    </aside>
+</main>
+<hr>
+<!--extra site info-->
+<footer>
+    <div class="page-footer">
+        <a href="about.html">About</a>
+        <a href="feedback.html">Feedback</a>
+    </div>
+</footer>
+</body>
 </html>

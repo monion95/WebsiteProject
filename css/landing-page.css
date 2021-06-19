@@ -22,10 +22,13 @@
 .featured-item {
     background-color: white;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .featured-item > a {
     text-decoration: none;
+    flex: 1;
 }
 
 .featured-item-image {
@@ -46,7 +49,17 @@
     border: 2px solid red;
 }
 
+.featured-item-buy-buttom img {
+    width: 22px;
+    height: auto;
+    filter: invert(100%) sepia(0%) saturate(7495%) hue-rotate(138deg) brightness(115%) contrast(100%);
+}
+
 .featured-item-buy-buttom:hover {
     color: red;
     background-color: white;
+}
+
+.featured-item-buy-buttom:hover img {
+    filter: invert(24%) sepia(82%) saturate(7492%) hue-rotate(356deg) brightness(103%) contrast(115%);
 }

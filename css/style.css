@@ -19,10 +19,19 @@ body > header {
     width: 1000px;
 }
 
-
 .page-header-content {
     display: flex;
     align-items: center;
+}
+
+.page-header-item img {
+    vertical-align: middle;
+    filter: invert(100%) sepia(0%) saturate(7495%) hue-rotate(138deg) brightness(115%) contrast(100%);
+}
+
+.nav-icon {
+    width: 25px;
+    height: auto;
 }
 
 body > nav{
@@ -44,7 +53,7 @@ body > main {
 
 .page-header-button {
     border: none;
-    color: black;
+    color: white;
     padding: 12px 14px;
     font-size: 20px;
     cursor: pointer;
@@ -62,8 +71,8 @@ body > main {
 }
 
 #navlogo {
-	width: 300x;
-    height: 100px;
+    width: 80px;
+    height: auto;
 }
 
 #quickSearch{
