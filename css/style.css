@@ -29,12 +29,8 @@ body > nav{
     background-color: #333333;
 }
 
-body > footer {
-    display: block;
-    box-sizing: content-box;
-    width: 1180px;
+.page-footer {
     background-color: LightBlue;
-    background-clip: padding-box;
     padding: 10px;
 }
 

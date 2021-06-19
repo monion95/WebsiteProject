@@ -43,10 +43,10 @@
     background-color: red;
     font-size: 22px;
     cursor: pointer;
+    border: 2px solid red;
 }
 
 .featured-item-buy-buttom:hover {
     color: red;
     background-color: white;
-    border: 2px solid red;
 }
