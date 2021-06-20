@@ -48,14 +48,104 @@
         </nav>
 
         <main>
-            <section>
-                Left
-            </section>
-                Right
-            <section>
-            </section>
-            <aside>
-            </aside>
+            <div id=search-filter>                
+                <p>Filters</p>
+                <select class=filter>
+                    <option value="0">Platform</option>
+                    <option value="1">PS4</option>
+                    <option value="2">PS5</option>
+                    <option value="3">Switch</option>
+                    <option value="3">Console</option>
+                </select>
+                <select class=filter>
+                    <option value="0">Price Range</option>
+                    <option value="1">less than $30</option>
+                    <option value="2">$30 - $60  </option>
+                    <option value="3">$60 - $90  </option>
+                    <option value="3">Above $90  </option>
+                </select>
+                <select class=filter>
+                    <option value="0">Category</option>
+                    <option value="1">Sports</option>
+                    <option value="2">Action</option>
+                    <option value="3">Strategy</option>
+                    <option value="2">RPG</option>
+                    <option value="3">Adventure</option>
+                </select>
+                <select class=filter>
+                    <option value="0">Rating</option>
+                    <option value="1">4.0+</option>
+                    <option value="2">3.0+</option>
+                </select>
+
+            </div>
+
+
+            <div id=order-by>  
+                <a href="ps4.html">  
+                    Title                      
+                    <img class="nav-icon" src="image/icons/sort-alpha-down-alt.svg" alt="alpha-down">      
+                </a>   
+                <a href="ps4.html">Price</a>
+                <a href="ps5.html">Release Date</a>
+                <a href="switch.html">Best Seller</a>
+                <a href="console.html">Rating</a>
+            </div> 
+
+            <div id=search-Result>
+                <div class=result-item>
+                    <div class=product-image>
+                        <img src="../../image/ps4/Avengers.jpg" alt="ps4-Avengers" >
+                    </div>
+                    <div class=product-info>
+                        <p>Introduction</p>
+                        <label for="quantity" id = quantityLabel>Quantity</label>
+                        <input type="number" id="quantity" name="quantity" , value = "1" min="1" max="5">
+                    </div>
+                    <div>
+                        <button class="featured-item-buy-buttom">
+                            <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
+                            <span class="featured-item-price">$79.99</span>
+                        </button>
+                    </div>
+
+                </div>
+                <div class=result-item>
+                    <div class=product-image>
+                        <img src="../../image/ps4/Avengers.jpg" alt="ps4-Avengers" >
+                    </div>
+                    <div class=product-info>
+                        <label for="quantity" id = quantityLabel>Quantity</label>
+                        <input type="number" id="quantity" name="quantity" , value = "1" min="1" max="5">
+                    </div>
+                    <div>
+                        <button class="featured-item-buy-buttom">
+                            <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
+                            <span class="featured-item-price">$79.99</span>
+                        </button>
+                    </div>
+
+                </div>
+                <div class=result-item>
+                    <div class=product-image>
+                        <img src="../../image/ps4/Avengers.jpg" alt="ps4-Avengers" >
+                    </div>
+                    <div class=product-info>
+                        <label for="quantity" id = quantityLabel>Quantity</label>
+                        <input type="number" id="quantity" name="quantity" , value = "1" min="1" max="5">
+                    </div>
+                    <div>
+                        <button class="featured-item-buy-buttom">
+                            <img class="nav-icon" src="image/icons/cart-plus.svg" alt="Add to cart">
+                            <span class="featured-item-price">$79.99</span>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+           
+
         </main>
         <footer>
             <div class="page-footer">
