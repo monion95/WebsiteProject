@@ -1,56 +1,77 @@
+/*design whole page*/
 body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    background-color: white;
     margin: 0;
 }
 
+/*design the sticky header menu*/
 body > header {
     background-color: #d1522b;
     position: sticky;
     top: 0;
-    display: flex;
-    justify-content: center;
 }
 
+/*set width of header menus*/
 .page-header-content, body > nav, body > main, body > footer {
     width: 1000px;
 }
 
+/*display header menu content in flex*/
 .page-header-content {
     display: flex;
     align-items: center;
 }
 
+/*set header item images*/
 .page-header-item img {
     vertical-align: middle;
     filter: invert(100%) sepia(0%) saturate(7495%) hue-rotate(138deg) brightness(115%) contrast(100%);
 }
 
+/*set nav bar */
 .nav-icon {
     width: 25px;
     height: auto;
 }
 
+/*display menu in flex*/
+#menu {
+    display: flex;
+}
+
+/*design menu items(fonts, gap between)*/
+#menu > a {
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    width: 80px;
+}
+
+/*set nav bar bg color*/
 body > nav{
     background-color: #333333;
 }
 
+/*design footer*/
 .page-footer {
     background-color: LightBlue;
     padding: 10px;
 }
 
+/*design mainbody bg color*/
 body > main {
     background-color: #e8e8e8;
 }
 
+/*display header item in block*/
 .page-header-item {
     display: block;
 }
 
+/*design button*/
 .page-header-button {
     border: none;
     color: white;
@@ -61,48 +82,40 @@ body > main {
     font-weight: 400;
 }
 
+/*design button hover option*/
 .page-header-button:hover {
     background-color: #682915;
 }
 
+/*design logo area*/
 .main-logo {
     align-self: flex-start;
     flex: 1;
 }
 
+/*logo*/
 #navlogo {
     width: 80px;
     height: auto;
 }
 
+/*quick search bar*/
 #quickSearch{
     height: 40px;
     width: 300px;
 }
 
-#menu {
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-#menu > a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-    width: 80px;
-}
-
+/*design menu hover*/
 #menu a:hover {
     background-color: #111111;
 }
 
+/*banner margin*/
 #banner {
     margin-top: 10px;
 }
 
+/*banner image*/
 .banner-image {
     max-width: 100%;
 }
