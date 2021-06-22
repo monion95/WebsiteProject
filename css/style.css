@@ -33,7 +33,7 @@ body > header {
 }
 
 /*set nav bar */
-.nav-icon {
+.nav-icon { 
     width: 25px;
     height: auto;
 }
@@ -105,11 +105,6 @@ body > nav{
 /*design menu hover*/
 #menu a:hover {
     background-color: #111111;
-}
-
-/*banner margin*/
-#banner {
-    margin-top: 10px;
 }
 
 /*banner image*/
