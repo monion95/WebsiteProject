@@ -1,11 +1,9 @@
-.product{
-    margin:0px 200px 0px 200px
-}
+/* set product-image margin*/
 .product-image{
-    float: left;
     margin:20px 20px 20px 20px;
 }
 
+/*set product-texts bar*/
 .product-texts{  
     overflow: auto;
     border-bottom: solid 1px black;
@@ -14,45 +12,54 @@
     font-size: 17px;
 }
 
+/*make title float to left*/
 .product-title{
     float: left;
 }
 
+/*make rating float to right*/
 .Rating{
     float: right;
 }
 
+/*diplay maininfo container in flex box*/
 .maininfo{
     display: flex;
     align-items: center;
     margin: 20px;
     padding: 10px;
-    justify-content: center;
     flex-direction: column;
     row-gap: 20px;
 }
 
+/*set text of product-price*/
 .product-price{
     font-size: 35px;
     font-weight: bold;
     
 }
 
+/*align description header text to center*/
 .product-description h1{
     text-align: center;
 }
+
+/*set description paragraph font size*/
 .product-description p{
     font-size: 20px;
 }
+
+/*set quantityLabel font size*/
 #quantityLabel{
     font-size: 20px;
 }
 
+/*button for cart*/
 #addToCart{
-    background-color:#d1522b;
+    padding: 10px;
     border: none;
     color: white;
-    padding: 10px 10px;
-    font-size: 20px;
+    background-color: red;
+    font-size: 22px;
     cursor: pointer;
 }

@@ -1,102 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Cart</title>
-        <link rel="stylesheet" href="css/style.css" type="text/css" />
-        <link rel="stylesheet" href="css/cart.css" type="text/css" />
-    </head>
-    <body>
-        <!--Navagation Bar, including a menu to select product pages-->
-        <header>
-            <div class="page-header-content">
-                <div class="main-logo page-header-item">
-                    <a href="index.html">
-                        <img id="navlogo" src="image/logo/logo.png" alt="Logo">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/cart.css" type="text/css" />
+</head>
+<body>
+<!--Navagation Bar, including a menu to select product pages-->
+<header>
+    <div class="page-header-content">
+        <div class="main-logo page-header-item">
+            <a href="index.html">
+                <img id="navlogo" src="image/logo/logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="page-header-item">
+            <div id="searchBar">
+                <form>
+                    <input type="text" id="quickSearch" name="q" placeholder="What are you looking for?">
+                    <a href="SearchResultpage.html"><img class="nav-icon" src="image/icons/search.svg" alt="search"></i>
                     </a>
-                </div>
-                <div class="page-header-item">
-                    <div id="searchBar">
-                        <form>
-                            <input type="text" id="quickSearch" name="q" placeholder="What are you looking for?">
-                            <a href="SearchResultpage.html"><img class="nav-icon" src="image/icons/search.svg" alt="search"></i>
-                            </a>
-                        </form>
-                    </div>
-                </div>
-                <div class="page-header-item">
-                    <a href="login.html" class="page-header-button">
-                        <img class="nav-icon" src="image/icons/box-arrow-in-right.svg" alt="Login">
-                        Login
-                    </a>
-                </div>
-                <div class="page-header-item">
-                    <a href="cart.html" class="page-header-button">
-                        <img class="nav-icon" src="image/icons/cart.svg" alt="Cart">
-                        My cart
-                    </a>
-                </div>
-            </div>
-        </header>
-        <nav>
-            <div id = menu>
-                <a href="ps4.html">PS4</a>
-                <a href="ps5.html">PS5</a>
-                <a href="switch.html">Switch</a>
-                <a href="console.html">Console</a>
-            </div>
-        </nav>
-        <main>
-            <section id="cartHeader">
-                <div class="cart-col-0">Item</div>
-                <div class="cart-col-1">price</div>
-                <div class="cart-col-2">Quantity</div>
-            </section>
-            <section id="cartContent">
-                <div class="cart-item">
-                    <a class="cart-col-0 cart-item-head" href="ps4/2k21">
-                        <div class="cart-item-image">
-                            <img class="cart-item-image" src="image/ps4/2k21.jpg" alt="2k21">
-                        </div>
-                        <div class="cart-item-name">NBA 2K21</div>
-                    </a>
-                    <div class="cart-col-1 cart-item-price">$79.99</div>
-                    <div class="cart-col-2 cart-item-quantity">1</div>
-                </div>
-                <div class="cart-item">
-                    <a class="cart-col-0 cart-item-head" href="ps4/2k21">
-                        <div class="cart-item-image">
-                            <img class="cart-item-image" src="image/ps4/2k21.jpg" alt="2k21">
-                        </div>
-                        <div class="cart-item-name">NBA 2K21</div>
-                    </a>
-                    <div class="cart-col-1 cart-item-price">$79.99</div>
-                    <div class="cart-col-2 cart-item-quantity">1</div>
-                </div>
-                <div class="cart-item">
-                    <a class="cart-col-0 cart-item-head" href="ps4/2k21">
-                        <div class="cart-item-image">
-                            <img class="cart-item-image" src="image/ps4/2k21.jpg" alt="2k21">
-                        </div>
-                        <div class="cart-item-name">NBA 2K21</div>
-                    </a>
-                    <div class="cart-col-1 cart-item-price">$79.99</div>
-                    <div class="cart-col-2 cart-item-quantity">1</div>
-                </div>
-            </section>
-            <section>
-                <form id="checkoutForm">
-                    <input type="submit" id="submit" value="Checkout">
                 </form>
-            </section>
-            <aside>
-            </aside>
-        </main>
-        <footer>
-            <div class="page-footer">
-                <a href="about.html">About</a>
-                <a href="feedback.html">Feedback</a>
             </div>
-        </footer>
-    </body>
+        </div>
+        <div class="page-header-item">
+            <a href="login.html" class="page-header-button">
+                <img class="nav-icon" src="image/icons/box-arrow-in-right.svg" alt="Login">
+                Login
+            </a>
+        </div>
+        <div class="page-header-item">
+            <a href="cart.html" class="page-header-button">
+                <img class="nav-icon" src="image/icons/cart.svg" alt="Cart">
+                My cart
+            </a>
+        </div>
+    </div>
+</header>
+<nav>
+    <div id="menu">
+        <a href="ps4.html">PS4</a>
+        <a href="ps5.html">PS5</a>
+        <a href="switch.html">Switch</a>
+        <a href="console.html">Console</a>
+    </div>
+</nav>
+<!--main content of the page-->
+<main>
+    <section id="cart">
+        <!--header of cart-->
+        <section id="cartHeader">
+            <div class="cart-col-0">Item</div>
+            <div class="cart-col-1">price</div>
+            <div class="cart-col-2">Quantity</div>
+        </section>
+        <!--products in cart-->
+        <section id="cartContent">
+            <div class="cart-item">
+                <a class="cart-col-0 cart-item-head" href="products/ps4/2k21.html">
+                    <div class="cart-item-image">
+                        <img class="cart-item-image" src="image/ps4/2k21.jpg" alt="2k21">
+                    </div>
+                    <div class="cart-item-name">NBA 2K21</div>
+                </a>
+                <div class="cart-col-1 cart-item-price">$79.99</div>
+                <div class="cart-col-2 cart-item-quantity">
+                    <input type="number" value = "1">
+                </div>
+            </div>
+            <div class="cart-item">
+                <a class="cart-col-0 cart-item-head" href="products/ps4/fifa21.html">
+                    <div class="cart-item-image">
+                        <img class="cart-item-image" src="image/ps4/fifa21.jpg" alt="fifa21">
+                    </div>
+                    <div class="cart-item-name">fifa21</div>
+                </a>
+                <div class="cart-col-1 cart-item-price">$79.99</div>
+                <div class="cart-col-2 cart-item-quantity">
+                    <input type="number" value = "1">
+                </div>
+            </div>
+            <div class="cart-item">
+                <a class="cart-col-0 cart-item-head" href="products/ps5/bf2042.html">
+                    <div class="cart-item-image">
+                        <img class="cart-item-image" src="image/ps5/bf2042.jpg" alt="bf2042">
+                    </div>
+                    <div class="cart-item-name">bf2042</div>
+                </a>
+                <div class="cart-col-1 cart-item-price">$79.99</div>
+                <div class="cart-col-2 cart-item-quantity">
+                    <input type="number" value = "1">
+                </div>
+            </div>
+            <div class="cart-item">
+                <a class="cart-col-0 cart-item-head" href="products/ps5/dyinglight2.html">
+                    <div class="cart-item-image">
+                        <img class="cart-item-image" src="image/ps5/dyinglight2.jpg" alt="dyinglight2">
+                    </div>
+                    <div class="cart-item-name">dyinglight2</div>
+                </a>
+                <div class="cart-col-1 cart-item-price">$79.99</div>
+                <div class="cart-col-2 cart-item-quantity">
+                    <input type="number" value = "1">
+                </div>
+            </div>
+        </section>
+        <!--cart checkout-->
+        <section id="cartCheckout">
+            <button id="cartCheckoutButton">Checkout</button>
+        </section>
+    </section>
+    <aside>
+    </aside>
+</main>
+<!--page extra info-->
+<footer>
+    <div class="page-footer">
+        <a href="about.html">About</a>
+        <a href="feedback.html">Feedback</a>
+    </div>
+</footer>
+</body>
 </html>
