@@ -27,6 +27,8 @@ body > header {
 /*set header item images*/
 .page-header-item img {
     vertical-align: middle;
+    
+    /* convert black to white, generated on https://codepen.io/sosuke/pen/Pjoqqp*/
     filter: invert(100%) sepia(0%) saturate(7495%) hue-rotate(138deg) brightness(115%) contrast(100%);
 }
 
@@ -59,11 +61,6 @@ body > nav{
 .page-footer {
     background-color: LightBlue;
     padding: 10px;
-}
-
-/*design mainbody bg color*/
-body > main {
-    background-color: #e8e8e8;
 }
 
 /*display header item in block*/
@@ -118,4 +115,36 @@ body > main {
 /*banner image*/
 .banner-image {
     max-width: 100%;
+}
+
+/* primary button style*/
+.primary-button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    color: white;
+    background-color: red;
+    font-size: 22px;
+    cursor: pointer;
+    border: 2px solid red;
+}
+
+.primary-button img {
+    width: 22px;
+    height: auto;
+    /* convert black to white, generated on https://codepen.io/sosuke/pen/Pjoqqp*/
+    filter: invert(100%) sepia(0%) saturate(7495%) hue-rotate(138deg) brightness(115%) contrast(100%);
+}
+
+.primary-button:hover {
+    color: red;
+    background-color: white;
+}
+
+.primary-button:hover img {
+    /* convert black to red, generated on https://codepen.io/sosuke/pen/Pjoqqp*/
+    filter: invert(24%) sepia(82%) saturate(7492%) hue-rotate(356deg) brightness(103%) contrast(115%);
 }
