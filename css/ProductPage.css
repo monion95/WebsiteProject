@@ -3,6 +3,12 @@
     margin:20px 20px 20px 20px;
 }
 
+/*set product-image size*/
+.product-image img{
+    width: 300px;
+    height: auto;
+}
+
 /*set product-texts bar*/
 .product-texts{  
     overflow: auto;
