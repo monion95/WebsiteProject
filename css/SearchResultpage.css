@@ -48,13 +48,19 @@ select {
 
 #search-result {
   display: inline-block;
+
 }
 .product-info{
   display:grid;
 }
-
+.result-item {
+  padding: 20px; 
+  border-bottom:0.5px solid rgb(236, 228, 228);
+}
 .result-item div{
   display:inline-flex;
-  width:30%;
+  width:25%;
   vertical-align: middle;
+  flex-direction: column;
+  padding: 20px;
 }
