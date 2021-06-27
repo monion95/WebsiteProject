@@ -1,3 +1,4 @@
+/*main content area */
 #cart {
     display: flex;
     flex-direction: column;
@@ -7,6 +8,7 @@
     margin-bottom: 15px;
 }
 
+/*cart Header inside main content*/
 #cartHeader {
     font-size: 22px;
     font-weight: 400;
@@ -14,6 +16,7 @@
     align-items: center;
 }
 
+/*cart content font size*/
 #cartContent {
     font-size: 16px;
 }
@@ -54,6 +57,7 @@
     margin: 10px;
 }
 
+/*checkout button*/
 #cartCheckoutButton {
     font-size: 20px;
     font-weight: 400;

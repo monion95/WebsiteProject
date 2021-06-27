@@ -7,10 +7,8 @@ body{
 main{
     height: 80%;
 }
-section{
-    height:50%;
-    vertical-align: auto;
-} 
+
+/*design main content*/
 #loginForm{
     height:70%;
     margin: auto;
