@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>SearchResultpage</title>
+        <title>SearchResult</title>
         <link rel="stylesheet" href="css/style.css" type="text/css" />
         <link rel="stylesheet" href="css/SearchResultpage.css" type="text/css" />
     </head>
@@ -46,8 +46,9 @@
                 <a href="console.html">Console</a>
             </div>
         </nav>
-
+        <!-- main content, including filtering, ordering options and results -->
         <main>
+            <!-- different search filters -->
             <div id=search-filter>                
                 <p>Filters</p>
                 <select class=filter>
@@ -80,27 +81,47 @@
 
             </div>
 
-
+            <!-- ordering option, default title alphabetical order-->
             <div id=order-by>  
                 <a href="ps4.html">  
                     Title                      
-                    <img class="nav-icon" src="images/icons/sort-alpha-down-alt.svg" alt="alpha-down">      
+                    <img class="nav-icon" src="images/icons/sort-alpha-down.svg" alt="alpha-down">      
                 </a>   
                 <a href="ps4.html">Price</a>
                 <a href="ps5.html">Release Date</a>
                 <a href="switch.html">Best Seller</a>
                 <a href="console.html">Rating</a>
             </div> 
-
+            
+            <!-- Search results with image, title, price rating and platform-->
             <div id=search-Result>
                 <div class=result-item>
                     <div class=product-image>
                         <img src="images/ps4/Avengers.jpg" alt="ps4-Avengers" >
                     </div>
                     <div class=product-info>
-                        <p>Introduction</p>
-                        <label for="quantity" id = quantityLabel>Quantity</label>
-                        <input type="number" id="quantity" name="quantity" value = "1" min="1" max="5">
+                        <h2>Avengers</h2>
+                        <p>PS4, rating 4.0/5.0</p>
+                        <label for="quantity1" id = quantityLabel1>Quantity</label>
+                        <input type="number" id="quantity1" name="quantity" value = "1" min="1" max="5">
+                    </div>
+                    <div>
+                        <button class="primary-button">
+                            <img class="nav-icon" src="images/icons/cart-plus.svg" alt="Add to cart">
+                            <span class="featured-item-price">$59.99</span>
+                        </button>
+                    </div>
+
+                </div>
+                <div class=result-item>
+                    <div class=product-image>
+                        <img src="images/ps4/Cyberpunk.jpg" alt="ps4-Cyberpunk" >
+                    </div>
+                    <div class=product-info>
+                        <h2>Cyberpunk 2077</h2>
+                        <p>PS4, rating 5.0/5.0</p>
+                        <label for="quantity2" id = quantityLabel2>Quantity</label>
+                        <input type="number" id="quantity2" name="quantity" value = "1" min="1" max="5">
                     </div>
                     <div>
                         <button class="primary-button">
@@ -112,27 +133,13 @@
                 </div>
                 <div class=result-item>
                     <div class=product-image>
-                        <img src="images/ps4/Avengers.jpg" alt="ps4-Avengers" >
+                        <img src="images/ps4/Fifa21.jpg" alt="ps4-Fifa21" >
                     </div>
                     <div class=product-info>
-                        <label for="quantity" id = quantityLabel>Quantity</label>
-                        <input type="number" id="quantity" name="quantity" value = "1" min="1" max="5">
-                    </div>
-                    <div>
-                        <button class="primary-button">
-                            <img class="nav-icon" src="images/icons/cart-plus.svg" alt="Add to cart">
-                            <span class="featured-item-price">$79.99</span>
-                        </button>
-                    </div>
-
-                </div>
-                <div class=result-item>
-                    <div class=product-image>
-                        <img src="images/ps4/Avengers.jpg" alt="ps4-Avengers" >
-                    </div>
-                    <div class=product-info>
-                        <label for="quantity" id = quantityLabel>Quantity</label>
-                        <input type="number" id="quantity" name="quantity" value = "1" min="1" max="5">
+                        <h2>FiFA 21</h2>
+                        <p>PS4, rating 4.0/5.0</p>
+                        <label for="quantity3" id = quantityLabel3>Quantity</label>
+                        <input type="number" id="quantity3" name="quantity" value = "1" min="1" max="5">
                     </div>
                     <div>
                         <button class="primary-button">
@@ -147,6 +154,8 @@
            
 
         </main>
+
+        <!--page extra info-->
         <footer>
             <div class="page-footer">
                 <a href="about.html">About</a>

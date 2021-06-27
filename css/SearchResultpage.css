@@ -1,3 +1,4 @@
+/* divide the main content into three grid area: filters, ordering option and search results.*/
 main {
   display: grid;
   grid-template-columns: 150px auto;
@@ -5,6 +6,7 @@ main {
   grid-template-areas: "search-filter order-by""search-filter search-result";
 }
 
+/* set the style for order-by class */
 #order-by {
   background-color: #eee;
   margin: 0;
@@ -17,13 +19,18 @@ main {
   padding: 16px;
   text-decoration: none;
   width: auto;
-  /* display:inline-flex; */
   display: flex;
   align-items: center;
 }
 
 #order-by a:hover {
   background-color: #ccc;
+}
+
+/* set the style for search-filter area  */
+#search-filter {
+  grid-area: search-filter;
+  display: block;
 }
 
 select {
@@ -35,32 +42,24 @@ select {
   width: 100%;
 }
 
-#search-filter {
-  grid-area: search-filter;
-  display: block;
-}
-
+/* style for the search result components */
 .product-image img {
   width: 150px;
-  padding: auto;
 }
-
 
 #search-result {
   display: inline-block;
+}
 
-}
-.product-info{
-  display:grid;
-}
 .result-item {
-  padding: 20px; 
-  border-bottom:0.5px solid rgb(236, 228, 228);
+  padding: 20px;
+  border-bottom: 0.5px solid rgb(236, 228, 228);
 }
-.result-item div{
-  display:inline-flex;
-  width:25%;
-  vertical-align: middle;
+
+.result-item div {
+  display: inline-flex;
   flex-direction: column;
+  width: 25%;
+  vertical-align: middle;
   padding: 20px;
 }

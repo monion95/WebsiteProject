@@ -121,10 +121,10 @@ body > nav{
     padding: 10px;
     border: none;
     color: white;
-    background-color: red;
+    background-color: #d1522b;
     font-size: 22px;
     cursor: pointer;
-    border: 2px solid red;
+    border: 2px solid #d1522b;
 }
 
 .primary-button img {
@@ -135,7 +135,7 @@ body > nav{
 }
 
 .primary-button:hover {
-    color: red;
+    color: #d1522b;
     background-color: white;
 }
 
