@@ -5,6 +5,7 @@
     <title>Eager Gamers</title>
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
     <link rel="stylesheet" href="css/landing-page.css" type="text/css"/>
+    <script type="module" src="/js/landing-page.js"></script>
 </head>
 <body>
 <!--Navagation Bar, including a menu to select product pages-->
@@ -41,130 +42,14 @@
 </header>
 <nav>
     <div id="menu">
-        <a href="ps4.html">PS4</a>
-        <a href="ps5.html">PS5</a>
-        <a href="switch.html">Switch</a>
-        <a href="console.html">Console</a>
+        <a href="/?category=ps4">PS4</a>
+        <a href="/?category=ps5">PS5</a>
+        <a href="/?category=switch">Switch</a>
+        <a href="/?category=console">Console</a>
     </div>
 </nav>
 <!--main content of the page-->
 <main>
-    <!--page banner-->
-    <div id="banner">
-        <a href="products/ps5/bf2042.html">
-            <img class="banner-image" src="images/banners/battle-field.jpg" alt="battle-field">
-        </a>
-    </div>
-    <!--featured product lists-->
-    <div id="featured">
-        <section class="featured-group">
-            <h1 class="featured-group-title">PS4 Best Sellers</h1>
-            <div class="featured-group-content">
-                <div class="featured-item">
-                    <a href="products/ps4/2k21.html">
-                        <img class="featured-item-image" src="images/ps4/2k21.jpg" alt="2k21">
-                        <p class="featured-item-title">NBA 2K21</p>
-                    </a>
-                    <button class="primary-button">
-                        <img class="nav-icon" src="images/icons/cart-plus.svg" alt="Add to cart">
-                        <span class="featured-item-price">$79.99</span>
-                    </button>
-                </div>
-                <div class="featured-item">
-                    <a href="products/ps4/Avengers.html">
-                        <img class="featured-item-image" src="images/ps4/Avengers.jpg" alt="Avengers">
-                        <p class="featured-item-title">Avengers</p>
-                    </a>
-                    <button class="primary-button">
-                        <img class="nav-icon" src="images/icons/cart-plus.svg" alt="Add to cart">
-                        <span class="featured-item-price">$79.99</span>
-                    </button>
-                </div>
-                <div class="featured-item">
-                    <a href="products/ps4/Cyberpunk.html">
-                        <img class="featured-item-image" src="images/ps4/Cyberpunk.jpg" alt="Cyberpunk">
-                        <p class="featured-item-title">Cyberpunk 2077</p>
-                    </a>
-                    <button class="primary-button">
-                        <img class="nav-icon" src="images/icons/cart-plus.svg" alt="Add to cart">
-                        <span class="featured-item-price">$79.99</span>
-                    </button>
-                </div>
-            </div>
-        </section>
-        <section class="featured-group">
-            <h1 class="featured-group-title">PS5 Best Sellers</h1>
-            <div class="featured-group-content">
-                <div class="featured-item">
-                    <a href="products/ps5/rims.html">
-                        <img class="featured-item-image" src="images/ps5/rims.jpg" alt="rims">
-                        <p class="featured-item-title">RiMS Racing</p>
-                    </a>
-                    <button class="primary-button">
-                        <img class="nav-icon" src="images/icons/cart-plus.svg" alt="Add to cart">
-                        <span class="featured-item-price">$79.99</span>
-                    </button>
-                </div>
-                <div class="featured-item">
-                    <a href="products/ps5/sniper2.html">
-                        <img class="featured-item-image" src="images/ps5/sniper2.jpg" alt="sniper2">
-                        <p class="featured-item-title">SGW Contracts 2</p>
-                    </a>
-                    <button class="primary-button">
-                        <img class="nav-icon" src="images/icons/cart-plus.svg" alt="Add to cart">
-                        <span class="featured-item-price">$79.99</span>
-                    </button>
-                </div>
-                <div class="featured-item">
-                    <a href="products/ps5/wrc10.html">
-                        <img class="featured-item-image" src="images/ps5/wrc10.jpg" alt="wrc10">
-                        <p class="featured-item-title">WRC 10</p>
-                    </a>
-                    <button class="primary-button">
-                        <img class="nav-icon" src="images/icons/cart-plus.svg" alt="Add to cart">
-                        <span class="featured-item-price">$79.99</span>
-                    </button>
-                </div>
-            </div>
-        </section>
-        <section class="featured-group">
-            <h1 class="featured-group-title">Switch Best Sellers</h1>
-            <div class="featured-group-content">
-                <div class="featured-item">
-                    <a href="products/switch/mk8.html">
-                        <img class="featured-item-image" src="images/switch/mk8.jpg" alt="mk8">
-                        <p class="featured-item-title">Mario Kart 8 Deluxe</p>
-                    </a>
-                    <button class="primary-button">
-                        <img class="nav-icon" src="images/icons/cart-plus.svg" alt="Add to cart">
-                        <span class="featured-item-price">$79.99</span>
-                    </button>
-                </div>
-                <div class="featured-item">
-                    <a href="products/switch/modyssey.html">
-                        <img class="featured-item-image" src="images/switch/modyssey.jpg" alt="modyssey">
-                        <p class="featured-item-title">Super Mario Odyssey</p>
-                    </a>
-                    <button class="primary-button">
-                        <img class="nav-icon" src="images/icons/cart-plus.svg" alt="Add to cart">
-                        <span class="featured-item-price">$79.99</span>
-                    </button>
-                </div>
-                <div class="featured-item">
-                    <a href="products/switch/PokemonS.html">
-                        <img class="featured-item-image" src="images/switch/PokemonS.jpg" alt="PokemonS">
-                        <p class="featured-item-title">Pokémon Sword</p>
-                    </a>
-                    <button class="primary-button">
-                        <img class="nav-icon" src="images/icons/cart-plus.svg" alt="Add to cart">
-                        <span class="featured-item-price">$79.99</span>
-                    </button>
-                </div>
-            </div>
-        </section>
-    </div>
-    <aside>
-    </aside>
 </main>
 <hr>
 <!--extra site info-->

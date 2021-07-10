@@ -18,15 +18,16 @@
 }
 
 /*content of groups*/
-.featured-group-content{
-    margin-top: 5px;
+.featured-group-content {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
 }
 
 /*featured item*/
 .featured-item {
+    margin-top: 5px;
+    margin-right: 6px;
     background-color: white;
     padding: 10px;
     display: flex;
