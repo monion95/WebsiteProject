@@ -1,10 +1,10 @@
-import { getFeaturedProducts } from '/js/api.js'
-
+/*get the url to the product page of a product*/
 function getProductUrl(product) {
-    return `/products.html?id=${product.id}`;
+    return `products.html?id=${product.id}`;
 }
 
-function buildProductCard(product) {
+/*build html for one featured product*/
+function buildFeaturedItem(product) {
     return `<div class="featured-item">
 <a href="${getProductUrl(product)}">
     <img class="featured-item-image" src="${product.imageUrl}" alt="${product.name}">
@@ -17,10 +17,11 @@ function buildProductCard(product) {
 </div>`;
 }
 
+/*build html for one featured group*/
 function buildFeaturedGroup(featuredGroup) {
     let items = "";
     for(const p of featuredGroup.items) {
-        items += buildProductCard(p);
+        items += buildFeaturedItem(p);
     }
     return `<section class="featured-group">
     <h1 class="featured-group-title">${featuredGroup.title}</h1>
@@ -31,6 +32,7 @@ function buildFeaturedGroup(featuredGroup) {
 `
 }
 
+/*build html for all featured products of current page*/
 function buildFeaturedProducts(featuredProducts) {
     let groups = "";
     for(const group of featuredProducts.featuredGroups) {
@@ -43,7 +45,7 @@ function buildFeaturedProducts(featuredProducts) {
         bannerUrl = getProductUrl(featuredProducts.banner.product);
         bannerImageAlt = featuredProducts.banner.product.name;
     } else {
-        bannerUrl = "/";
+        bannerUrl = "";
         bannerImageAlt = "banner";
     }
     
@@ -57,6 +59,7 @@ function buildFeaturedProducts(featuredProducts) {
 </div>`;
 }
 
+/*set content of the main element after page load*/
 window.addEventListener('load', async (event) => {
     const urlSearchParams = new URLSearchParams(window.location.search);
     const params = Object.fromEntries(urlSearchParams.entries());
