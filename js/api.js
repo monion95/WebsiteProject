@@ -14,7 +14,7 @@ const switchGames = [
         id: 2
     },
     {
-        name: "Pok®¶mon Sword",
+        name: "Pok√©mon Sword",
         price: 79.99,
         category: "Switch",
         imageUrl: "/images/switch/PokemonS.jpg",
