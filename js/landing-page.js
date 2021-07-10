@@ -1,5 +1,4 @@
 import { getFeaturedProducts } from '/js/api.js'
-const main = document.getElementsByTagName('main')[0];
 
 function getProductUrl(product) {
     return `/products.html?id=${product.id}`;
@@ -61,5 +60,6 @@ function buildFeaturedProducts(featuredProducts) {
 window.addEventListener('load', async (event) => {
     const urlSearchParams = new URLSearchParams(window.location.search);
     const params = Object.fromEntries(urlSearchParams.entries());
+    const main = document.getElementsByTagName('main')[0];
     main.innerHTML = buildFeaturedProducts(await getFeaturedProducts(params.category));
 });
