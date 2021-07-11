@@ -234,7 +234,7 @@ async function getFeaturedProducts(platform) {
 
 /*get product detail by id*/
 async function getProductById(id) {
-    return idToProduct.get(id);
+    return idToProduct.get(Number(id));
 }
 
 /*search products*/
@@ -256,12 +256,20 @@ function getQueryParameters() {
 /*update search url when search text changed*/
 window.addEventListener('load', (event) => {
     const quickSearch = document.getElementById('quickSearch');
-    const quickSearchLink = document.getElementById('quickSearchLink');
-    if (!quickSearch || !quickSearchLink) {
+    if (!quickSearch) {
         return;
     }
-    quickSearch.addEventListener('change', (event) => {
-        quickSearchLink.href = `SearchResultpage.html?q=${quickSearch.value}`;
-    });
+    
+    const params = getQueryParameters();
+    if (params.q) {
+        quickSearch.value = params.q;
+    }
+    
+    const quickSearchLink = document.getElementById('quickSearchLink');
+    if (quickSearchLink) {
+        quickSearch.addEventListener('change', (event) => {
+            quickSearchLink.href = `SearchResultpage.html?q=${quickSearch.value}`;
+        });
+    }
 });
 
