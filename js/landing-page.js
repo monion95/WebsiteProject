@@ -1,8 +1,3 @@
-/*get the url to the product page of a product*/
-function getProductUrl(product) {
-    return `products.html?id=${product.id}`;
-}
-
 /*build html for one featured product*/
 function buildFeaturedItem(product) {
     return `<div class="featured-item">
@@ -61,8 +56,7 @@ function buildFeaturedProducts(featuredProducts) {
 
 /*set content of the main element after page load*/
 window.addEventListener('load', async (event) => {
-    const urlSearchParams = new URLSearchParams(window.location.search);
-    const params = Object.fromEntries(urlSearchParams.entries());
+    const params = getQueryParameters();
     const main = document.getElementsByTagName('main')[0];
     main.innerHTML = buildFeaturedProducts(await getFeaturedProducts(params.category));
 });

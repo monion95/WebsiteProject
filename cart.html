@@ -5,6 +5,7 @@
     <title>Cart</title>
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
     <link rel="stylesheet" href="css/cart.css" type="text/css"/>
+    <script src="js/api.js" type="text/javascript"></script>
 </head>
 <body>
 <!--Navagation Bar, including a menu to select product pages-->
@@ -17,11 +18,10 @@
         </div>
         <div class="page-header-item">
             <div id="searchBar">
-                <form>
-                    <input type="text" id="quickSearch" name="q" placeholder="What are you looking for?">
-                    <a href="SearchResultpage.html"><img class="nav-icon" src="images/icons/search.svg" alt="search">
-                    </a>
-                </form>
+                <input type="text" id="quickSearch" name="q" placeholder="What are you looking for?">
+                <a id="quickSearchLink" href="SearchResultpage.html">
+                    <img class="nav-icon" src="images/icons/search.svg" alt="search">
+                </a>
             </div>
         </div>
 
