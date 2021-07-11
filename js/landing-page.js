@@ -58,5 +58,5 @@ function buildFeaturedProducts(featuredProducts) {
 window.addEventListener('load', async (event) => {
     const params = getQueryParameters();
     const main = document.getElementsByTagName('main')[0];
-    main.innerHTML = buildFeaturedProducts(await getFeaturedProducts(params.category));
+    main.innerHTML = buildFeaturedProducts(await getFeaturedProducts(params.platform));
 });
