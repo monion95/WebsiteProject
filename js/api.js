@@ -22,7 +22,7 @@ const switchGames = [
     new Product(1, "Mario Kart 8 Deluxe", 79.99, "Switch", "images/switch/mk8.jpg", "sports", 3),
     new Product(2, "Super Mario Odyssey", 59.99, "Switch", "images/switch/modyssey.jpg", "sports", 4),
     new Product(3, "Pokémon Sword", 79.99, "Switch", "images/switch/PokemonS.jpg", "rpg", 4),
-    new Product(4, "The Legend of Zelda?: Breath of the Wild", 39.99, "Switch", "images/switch/zelda.jpg", "adventure", 5)
+    new Product(4, "The Legend of Zelda™: Breath of the Wild", 39.99, "Switch", "images/switch/zelda.jpg", "adventure", 5)
 ];
 
 const ps4Games = [
@@ -31,7 +31,7 @@ const ps4Games = [
     new Product(7, "Cyberpunk 2077", 39.99, "PS4", "images/ps4/Cyberpunk.jpg", "action", 3),
     new Product(8, "Final Fantasy VII", 59.99, "PS4", "images/ps4/FFvii.jpg", "sports", 5),
     new Product(9, "FIFA 21", 39.99, "PS4", "images/ps4/Fifa21.jpg", "action", 3),
-    new Product(1, "Need for Speed? Heat", 79.99, "PS4", "images/ps4/nfs.jpg", "strategy", 3),
+    new Product(1, "Need for Speed™ Heat", 79.99, "PS4", "images/ps4/nfs.jpg", "strategy", 3),
     new Product(1, "NHL 21", 59.99, "PS4", "images/ps4/nhl21.jpg", "adventure", 4)
 ];
 
