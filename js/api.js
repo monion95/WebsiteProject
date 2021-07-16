@@ -1,154 +1,46 @@
-const switchGames = [
-    {
-        name: "Mario Kart 8 Deluxe",
-        price: 79.99,
-        platform: "Switch",
-        imageUrl: "images/switch/mk8.jpg",
-        category: 'sports',
-        id: 1,
-        rating: 3
-    },
-    {
-        name: "Super Mario Odyssey",
-        price: 59.99,
-        platform: "Switch",
-        imageUrl: "images/switch/modyssey.jpg",
-        category: 'sports',
-        id: 2,
-        rating: 4
-    },
-    {
-        name: "Pokémon Sword",
-        price: 79.99,
-        platform: "Switch",
-        imageUrl: "images/switch/PokemonS.jpg",
-        category: 'rpg',
-        id: 3,
-        rating: 4.5
-    },
-    {
-        name: "The Legend of Zelda?: Breath of the Wild",
-        price: 39.99,
-        platform: "Switch",
-        imageUrl: "images/switch/zelda.jpg",
-        category: 'adventure',
-        id: 4,
-        rating: 5
+const DEFAULT_PRODUCT_DESCRIPTION = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At varius vel pharetra vel. Magna etiam tempor orci eu lobortis elementum nibh tellus molestie. Lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci. A iaculis at erat pellentesque adipiscing commodo elit at imperdiet. Habitant morbi tristique senectus et netus et malesuada fames. In cursus turpis massa tincidunt dui ut ornare lectus. Nec ullamcorper sit amet risus nullam eget felis eget nunc. Et leo duis ut diam quam nulla porttitor. Tristique senectus et netus et. Pretium nibh ipsum consequat nisl vel. Consequat id porta nibh venenatis cras sed felis.";
+
+class Product {
+    constructor(id, name, price, platform, imageUrl, category, rating, description = DEFAULT_PRODUCT_DESCRIPTION) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.platform = platform;
+        this.imageUrl = imageUrl;
+        this.category = category;
+        this.rating = rating;
+        this.description = description;
     }
+    
+    /*get the url to the page of the product*/
+    get url() {
+        return `product.html?id=${this.id}`;
+    }
+    
+}
+const switchGames = [
+    new Product(1, "Mario Kart 8 Deluxe", 79.99, "Switch", "images/switch/mk8.jpg", "sports", 3),
+    new Product(2, "Super Mario Odyssey", 59.99, "Switch", "images/switch/modyssey.jpg", "sports", 4),
+    new Product(3, "Pokémon Sword", 79.99, "Switch", "images/switch/PokemonS.jpg", "rpg", 4),
+    new Product(4, "The Legend of Zelda?: Breath of the Wild", 39.99, "Switch", "images/switch/zelda.jpg", "adventure", 5)
 ];
 
 const ps4Games = [
-    {
-        name: "NBA 2K21",
-        price: 79.99,
-        platform: "PS4",
-        imageUrl: "images/ps4/2k21.jpg",
-        category: 'rpg',
-        id: 5,
-        rating: 3.5
-    },
-    {
-        name: "Avengers",
-        price: 59.99,
-        platform: "PS4",
-        imageUrl: "images/ps4/Avengers.jpg",
-        category: 'sports',
-        id: 6,
-        rating: 5
-    },
-    {
-        name: "Cyberpunk 2077",
-        price: 39.99,
-        platform: "PS4",
-        imageUrl: "images/ps4/Cyberpunk.jpg",
-        category: 'action',
-        id: 7,
-        rating: 3
-    },
-    {
-        name: "Final Fantasy VII",
-        price: 59.99,
-        platform: "PS4",
-        imageUrl: "images/ps4/FFvii.jpg",
-        category: 'sports',
-        id: 8,
-        rating: 5
-    },
-    {
-        name: "FIFA 21",
-        price: 39.99,
-        platform: "PS4",
-        imageUrl: "images/ps4/Fifa21.jpg",
-        category: 'action',
-        id: 9,
-        rating: 3.5
-    },
-    {
-        name: "Need for Speed? Heat",
-        price: 79.99,
-        platform: "PS4",
-        imageUrl: "images/ps4/nfs.jpg",
-        category: 'strategy',
-        id: 10,
-        rating: 3.5
-    },
-    {
-        name: "NHL 21",
-        price: 59.99,
-        platform: "PS4",
-        imageUrl: "images/ps4/nhl21.jpg",
-        category: 'adventure',
-        id: 11,
-        rating: 4
-    }
+    new Product(5, "NBA 2K21", 79.99, "PS4", "images/ps4/2k21.jpg", "rpg", 3),
+    new Product(6, "Avengers", 59.99, "PS4", "images/ps4/Avengers.jpg", "sports", 5),
+    new Product(7, "Cyberpunk 2077", 39.99, "PS4", "images/ps4/Cyberpunk.jpg", "action", 3),
+    new Product(8, "Final Fantasy VII", 59.99, "PS4", "images/ps4/FFvii.jpg", "sports", 5),
+    new Product(9, "FIFA 21", 39.99, "PS4", "images/ps4/Fifa21.jpg", "action", 3),
+    new Product(1, "Need for Speed? Heat", 79.99, "PS4", "images/ps4/nfs.jpg", "strategy", 3),
+    new Product(1, "NHL 21", 59.99, "PS4", "images/ps4/nhl21.jpg", "adventure", 4)
 ];
 
 const ps5Games = [
-    {
-        name: "Battlefield 2042",
-        price: 19.99,
-        platform: "PS5",
-        imageUrl: "images/ps5/bf2042.jpg",
-        category: 'strategy',
-        id: 12,
-        rating: 4.5
-    },
-    {
-        name: "Dying Light 2",
-        price: 19.99,
-        platform: "PS5",
-        imageUrl: "images/ps5/dyinglight2.jpg",
-        category: 'sports',
-        id: 13,
-        rating: 3.5
-    },
-    {
-        name: "RiMS Racing",
-        price: 79.99,
-        platform: "PS5",
-        imageUrl: "images/ps5/rims.jpg",
-        category: 'action',
-        id: 14,
-        rating: 5
-    },
-    {
-        name: "SGW Contracts 2",
-        price: 59.99,
-        platform: "PS5",
-        imageUrl: "images/ps5/sniper2.jpg",
-        category: 'action',
-        id: 15,
-        rating: 4.5
-    },
-    {
-        name: "WRC 10",
-        price: 79.99,
-        platform: "PS5",
-        imageUrl: "images/ps5/wrc10.jpg",
-        category: 'adventure',
-        id: 16,
-        rating: 4.5
-    }
+    new Product(1, "Battlefield 2042", 19.99, "PS5", "images/ps5/bf2042.jpg", "strategy", 4),
+    new Product(1, "Dying Light 2", 19.99, "PS5", "images/ps5/dyinglight2.jpg", "sports", 3),
+    new Product(1, "RiMS Racing", 79.99, "PS5", "images/ps5/rims.jpg", "action", 5),
+    new Product(1, "SGW Contracts 2", 59.99, "PS5", "images/ps5/sniper2.jpg", "action", 4),
+    new Product(1, "WRC 10", 79.99, "PS5", "images/ps5/wrc10.jpg", "adventure", 4)
 ];
 
 const idToProduct = new Map();
@@ -159,7 +51,6 @@ const allProducts = [];
 function registerProducts(prods) {
     for (const p of prods) {
         idToProduct.set(p.id, p);
-        p.description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At varius vel pharetra vel. Magna etiam tempor orci eu lobortis elementum nibh tellus molestie. Lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci. A iaculis at erat pellentesque adipiscing commodo elit at imperdiet. Habitant morbi tristique senectus et netus et malesuada fames. In cursus turpis massa tincidunt dui ut ornare lectus. Nec ullamcorper sit amet risus nullam eget felis eget nunc. Et leo duis ut diam quam nulla porttitor. Tristique senectus et netus et. Pretium nibh ipsum consequat nisl vel. Consequat id porta nibh venenatis cras sed felis.";
         allProducts.push(p);
     }
 }
@@ -232,6 +123,10 @@ async function getFeaturedProducts(platform) {
     }
 }
 
+function toStarRating(numberRating) {
+    return "★★★★★☆☆☆☆☆".slice(5 - numberRating, 10 - numberRating);
+}
+
 /*get product detail by id*/
 async function getProductById(id) {
     return idToProduct.get(Number(id));
@@ -240,11 +135,6 @@ async function getProductById(id) {
 /*search products*/
 async function search(keywords, filters) {
     return [switchGames[0], ps4Games[0], ps5Games[0], consoles[0]];
-}
-
-/*get the url to the product page of a product*/
-function getProductUrl(product) {
-    return `product.html?id=${product.id}`;
 }
 
 /*get query parameters of current page url*/

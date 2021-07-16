@@ -34,10 +34,15 @@
     flex-direction: column;
 }
 
-/*link of featured item*/
-.featured-item > a {
-    text-decoration: none;
+/*major content of a product except the add to cart button*/
+.featured-item-body {
     flex: 1;
+    margin-bottom: 15px;
+}
+
+/*link of featured item*/
+.featured-item-body > a {
+    text-decoration: none;
 }
 
 /*image of featured item*/

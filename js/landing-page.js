@@ -1,14 +1,18 @@
 /*build html for one featured product*/
 function buildFeaturedItem(product) {
-    return `<div class="featured-item">
-<a href="${getProductUrl(product)}">
-    <img class="featured-item-image" src="${product.imageUrl}" alt="${product.name}">
-    <p class="featured-item-title">${product.name}</p>
-</a>
-<button class="primary-button">
-    <img class="nav-icon" src="images/icons/cart-plus.svg" alt="Add to cart">
-    <span class="featured-item-price">$${product.price}</span>
-</button>
+    return `
+<div class="featured-item">
+    <div class="featured-item-body">
+        <a href="${product.url}">
+            <img class="featured-item-image" src="${product.imageUrl}" alt="${product.name}">
+            <div class="featured-item-title">${product.name}</div>
+        </a>
+        <div class="product-rating">${toStarRating(product.rating)}</div>
+    </div>
+    <button class="primary-button">
+        <img class="nav-icon" src="images/icons/cart-plus.svg" alt="Add to cart">
+        <span class="featured-item-price">$${product.price}</span>
+    </button>
 </div>`;
 }
 
@@ -37,7 +41,7 @@ function buildFeaturedProducts(featuredProducts) {
     let bannerUrl;
     let bannerImageAlt;
     if (featuredProducts.banner.product) {
-        bannerUrl = getProductUrl(featuredProducts.banner.product);
+        bannerUrl = featuredProducts.banner.product.url;
         bannerImageAlt = featuredProducts.banner.product.name;
     } else {
         bannerUrl = "";

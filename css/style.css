@@ -143,3 +143,8 @@ body > nav{
     /* convert black to red, generated on https://codepen.io/sosuke/pen/Pjoqqp*/
     filter: invert(24%) sepia(82%) saturate(7492%) hue-rotate(356deg) brightness(103%) contrast(115%);
 }
+
+/*rating of product*/
+.product-rating {
+    color: gold;
+}
