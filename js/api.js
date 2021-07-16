@@ -31,16 +31,16 @@ const ps4Games = [
     new Product(7, "Cyberpunk 2077", 39.99, "PS4", "images/ps4/Cyberpunk.jpg", "action", 3),
     new Product(8, "Final Fantasy VII", 59.99, "PS4", "images/ps4/FFvii.jpg", "sports", 5),
     new Product(9, "FIFA 21", 39.99, "PS4", "images/ps4/Fifa21.jpg", "action", 3),
-    new Product(1, "Need for Speed™ Heat", 79.99, "PS4", "images/ps4/nfs.jpg", "strategy", 3),
-    new Product(1, "NHL 21", 59.99, "PS4", "images/ps4/nhl21.jpg", "adventure", 4)
+    new Product(10, "Need for Speed™ Heat", 79.99, "PS4", "images/ps4/nfs.jpg", "strategy", 3),
+    new Product(11, "NHL 21", 59.99, "PS4", "images/ps4/nhl21.jpg", "adventure", 4)
 ];
 
 const ps5Games = [
-    new Product(1, "Battlefield 2042", 19.99, "PS5", "images/ps5/bf2042.jpg", "strategy", 4),
-    new Product(1, "Dying Light 2", 19.99, "PS5", "images/ps5/dyinglight2.jpg", "sports", 3),
-    new Product(1, "RiMS Racing", 79.99, "PS5", "images/ps5/rims.jpg", "action", 5),
-    new Product(1, "SGW Contracts 2", 59.99, "PS5", "images/ps5/sniper2.jpg", "action", 4),
-    new Product(1, "WRC 10", 79.99, "PS5", "images/ps5/wrc10.jpg", "adventure", 4)
+    new Product(12, "Battlefield 2042", 19.99, "PS5", "images/ps5/bf2042.jpg", "strategy", 4),
+    new Product(13, "Dying Light 2", 19.99, "PS5", "images/ps5/dyinglight2.jpg", "sports", 3),
+    new Product(14, "RiMS Racing", 79.99, "PS5", "images/ps5/rims.jpg", "action", 5),
+    new Product(15, "SGW Contracts 2", 59.99, "PS5", "images/ps5/sniper2.jpg", "action", 4),
+    new Product(16, "WRC 10", 79.99, "PS5", "images/ps5/wrc10.jpg", "adventure", 4)
 ];
 
 const idToProduct = new Map();
