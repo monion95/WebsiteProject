@@ -26,7 +26,7 @@ const switchGames = [
 ];
 
 const ps4Games = [
-    new Product(5, "NBA 2K21", 79.99, "PS4", "images/ps4/2k21.jpg", "rpg", 3,),
+    new Product(5, "NBA 2K21", 79.99, "PS4", "images/ps4/2k21.jpg", "rpg", 3),
     new Product(6, "Avengers", 59.99, "PS4", "images/ps4/Avengers.jpg", "sports", 5),
     new Product(7, "Cyberpunk 2077", 39.99, "PS4", "images/ps4/Cyberpunk.jpg", "action", 3),
     new Product(8, "Final Fantasy VII", 59.99, "PS4", "images/ps4/FFvii.jpg", "sports", 5),
