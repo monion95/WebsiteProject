@@ -96,10 +96,14 @@ body > nav{
     height: auto;
 }
 
+#searchBar{
+    margin-right: 100px;
+}
 /*quick search bar*/
 #quickSearch{
     height: 40px;
     width: 300px;
+    
 }
 
 /*design menu hover*/

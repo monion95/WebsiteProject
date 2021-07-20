@@ -33,13 +33,15 @@ main {
   display: block;
 }
 
-select {
-  border: 0;
+.filter {
+  margin-top:10px;
+  margin-bottom:10px;
+  border: 1px;
   border-top: 1px solid rgb(83, 83, 83);
-  background-color: transparent;
+  /* background-color: transparent;
   display: block;
   padding: 20px;
-  width: 100%;
+  width: 100%; */
 }
 
 /* style for the search result components */
@@ -62,4 +64,9 @@ select {
   width: 25%;
   vertical-align: middle;
   padding: 20px;
+}
+
+#quantity1{
+  margin-top:10px;
+  width:80px;
 }

@@ -134,7 +134,26 @@ async function getProductById(id) {
 
 /*search products*/
 async function search(keywords, filters) {
-    return [switchGames[0], ps4Games[0], ps5Games[0], consoles[0]];
+    if (keywords==null){
+        productFiltered = allProducts;
+    } else{
+        productFiltered = allProducts.filter((item)=>{return item.name.toUpperCase().includes(keywords.toUpperCase())});
+    }
+    console.log("platform filters: "+filters.platform)
+    if (filters.platform!='nofilter'){
+        productFiltered = productFiltered.filter((item)=>{return item.platform.includes(filters.platform)}); 
+    }
+    if (filters.price!='nofilter'){
+        productFiltered = productFiltered.filter((item)=>{return item.price>=filters.price&&item.price<30+filters.price}); 
+    }
+    if (filters.category!='nofilter'){
+        productFiltered = productFiltered.filter((item)=>{return item.category.includes(filters.category)}); 
+    }
+    if (filters.rating!='nofilter'){
+        productFiltered = productFiltered.filter((item)=>{return item.rating.includes(filters.rating)}); 
+    }
+
+    return productFiltered
 }
 
 /*get query parameters of current page url*/

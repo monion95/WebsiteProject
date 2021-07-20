@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     <link rel="stylesheet" href="css/SearchResultpage.css" type="text/css" />
     <script src="js/api.js" type="text/javascript"></script>
+    <script src="js/searchResultPage.js" type="text/javascript"></script>
 </head>
 <body>
 <!--Navagation Bar, including a menu to select product pages-->
@@ -38,6 +39,7 @@
         </div>
     </div>
 </header>
+
 <nav>
     <div id="menu">
         <a href="index.html?platform=ps4">PS4</a>
@@ -45,43 +47,108 @@
         <a href="index.html?platform=switch">Switch</a>
     </div>
 </nav>
+
 <!-- main content, including filtering, ordering options and results -->
 <main>
     <!-- different search filters -->
     <div id=search-filter>
-        <p>Filters</p>
-        <select class=filter>
-            <option value="0">Platform</option>
-            <option value="1">PS4</option>
-            <option value="2">PS5</option>
-            <option value="3">Switch</option>
-            <option value="3">Console</option>
-        </select>
-        <select class=filter>
-            <option value="0">Price Range</option>
-            <option value="1">less than $30</option>
-            <option value="2">$30 - $60  </option>
-            <option value="3">$60 - $90  </option>
-            <option value="3">Above $90  </option>
-        </select>
-        <select class=filter>
-            <option value="0">Category</option>
-            <option value="1">Sports</option>
-            <option value="2">Action</option>
-            <option value="3">Strategy</option>
-            <option value="2">RPG</option>
-            <option value="3">Adventure</option>
-        </select>
-        <select class=filter>
-            <option value="0">Rating</option>
-            <option value="1">4.0+</option>
-            <option value="2">3.0+</option>
-        </select>
+    <p>Filters</p>
+    <div class=filters>
+        <div class=filter>
+            <div class = filterOption>
+                <input type = radio id = "anyPlatform" name ="Platform" value = "nofilter" checked>
+                <label for ="anyPlatform">-Any Platform-</label>
+            </div>
+            <div class = filterOption>
+                <input type = radio id = "PS4" name ="Platform" value = "PS4" >
+                <label for ="PS4">PS4</label>
+            </div>
+            <div class = filterOption>
+                <input type = radio id = "PS5" name ="Platform" value = "PS5" >
+                <label for ="PS5">PS5</label>
+            </div>
+            <div class = filterOption>
+                <input type = radio id = "Switch" name ="Platform" value = "Switch" >
+                <label for ="Switch">Switch</label>
+            </div>
+        </div>
 
+        <div class=filter>
+            <div class = filterOption>
+                <input type = radio id = "anyPrice" name ="Price" value = "nofilter" checked>
+                <label for ="anyPrice">-Any Price-</label>
+            </div>
+            <div class = filterOption>
+                <input type = radio id = "0" name ="Price" value = "0" >
+                <label for ="0">Under $30</label>
+            </div>
+            <div class = filterOption>
+                <input type = radio id = "30" name ="Price" value = "30" >
+                <label for ="30">$30 - $60</label>
+            </div>
+            <div class = filterOption>
+                <input type = radio id = "60" name ="Price" value = "60" >
+                <label for ="60">Above $60</label>
+            </div>
+        </div>
+        <div class=filter>
+            <div class = filterOption>
+                <input type = radio id = "anyCategory" name ="Category" value = "nofilter" checked>
+                <label for ="anyCategory">-Any Category-</label>
+            </div>
+            <div class = filterOption>
+                <input type = radio id = "Sports" name ="Category" value = "Sports" >
+                <label for ="Sports">Sports</label>
+            </div>
+            <div class = filterOption>
+                <input type = radio id = "Action" name ="Category" value = "Action" >
+                <label for ="Action">Action</label>
+            </div>
+            <div class = filterOption>
+                <input type = radio id = "Strategy" name ="Category" value = "Strategy" >
+                <label for ="Strategy">Strategy</label>
+            </div>
+            <div class = filterOption>
+                <input type = radio id = "RPG" name ="Category" value = "RPG" >
+                <label for ="RPG">RPG</label>
+            </div>
+            <div class = filterOption>
+                <input type = radio id = "Adventure" name ="Category" value = "Adventure" >
+                <label for ="Adventure">Adventure</label>
+            </div>
+        </div>
+        <div class=filter>
+            <div class = filterOption>
+                <input type = radio id = "anyRating" name ="Rating" value = "nofilter" checked>
+                <label for ="anyRating">-Any Rating-</label>
+            </div>
+            <div class = filterOption>
+                <input type = radio id = "★★★★★" name ="Rating" value = 5>
+                <label for ="★★★★★">★★★★★</label>
+            </div>
+            <div class = filterOption>
+                <input type = radio id = "★★★★☆" name ="Rating" value = 4 >
+                <label for ="★★★★☆">★★★★☆</label>
+            </div>
+            <div class = filterOption>
+                <input type = radio id = "★★★☆☆" name ="Rating" value = 3 >
+                <label for ="★★★☆☆">★★★☆☆</label>
+            </div>
+            <div class = filterOption>
+                <input type = radio id = "★★☆☆☆" name ="Rating" value = 2 >
+                <label for ="★★☆☆☆">★★☆☆☆</label>
+            </div>
+            <div class = filterOption>
+                <input type = radio id = "★☆☆☆☆" name ="Rating" value = 1 >
+                <label for ="★☆☆☆☆">★☆☆☆☆</label>
+            </div>
+        </div>
     </div>
 
+    </div>
     <!-- ordering option, default title alphabetical order-->
     <div id=order-by>
+        <!-- todo change to button                              -->
         <a href="ps4.html">
             Title
             <img class="nav-icon" src="images/icons/sort-alpha-down.svg" alt="alpha-down">
@@ -91,73 +158,9 @@
         <a href="switch.html">Best Seller</a>
         <a href="console.html">Rating</a>
     </div>
-
     <!-- Search results with image, title, price rating and platform-->
     <div id=search-Result>
-        <div class=result-item>
-            <div class=product-image>
-                <a href="products/ps4/Avengers.html">
-                    <img src="images/ps4/Avengers.jpg" alt="ps4-Avengers" >
-                </a>
-            </div>
-            <div class=product-info>
-                <h2>Avengers</h2>
-                <p>PS4, rating 4.0/5.0</p>
-                <label for="quantity1" id = quantityLabel1>Quantity</label>
-                <input type="number" id="quantity1" name="quantity" value = "1" min="1" max="5">
-            </div>
-            <div>
-                <button class="primary-button">
-                    <img class="nav-icon" src="images/icons/cart-plus.svg" alt="Add to cart">
-                    <span class="featured-item-price">$59.99</span>
-                </button>
-            </div>
-
-        </div>
-        <div class=result-item>
-            <div class=product-image>
-                <a href="products/ps4/Cyberpunk.html">
-                    <img src="images/ps4/Cyberpunk.jpg" alt="ps4-Cyberpunk" >
-                </a>
-            </div>
-            <div class=product-info>
-                <h2>Cyberpunk 2077</h2>
-                <p>PS4, rating 5.0/5.0</p>
-                <label for="quantity2" id = quantityLabel2>Quantity</label>
-                <input type="number" id="quantity2" name="quantity" value = "1" min="1" max="5">
-            </div>
-            <div>
-                <button class="primary-button">
-                    <img class="nav-icon" src="images/icons/cart-plus.svg" alt="Add to cart">
-                    <span class="featured-item-price">$79.99</span>
-                </button>
-            </div>
-
-        </div>
-        <div class=result-item>
-            <div class=product-image>
-                <a href="products/ps4/fifa21.html">
-                    <img src="images/ps4/Fifa21.jpg" alt="ps4-Fifa21" >
-                </a>
-            </div>
-            <div class=product-info>
-                <h2>FiFA 21</h2>
-                <p>PS4, rating 4.0/5.0</p>
-                <label for="quantity3" id = quantityLabel3>Quantity</label>
-                <input type="number" id="quantity3" name="quantity" value = "1" min="1" max="5">
-            </div>
-            <div>
-                <button class="primary-button">
-                    <img class="nav-icon" src="images/icons/cart-plus.svg" alt="Add to cart">
-                    <span class="featured-item-price">$79.99</span>
-                </button>
-            </div>
-
-        </div>
-
-    </div>
-
-
+    </div>   
 </main>
 
 <!--page extra info-->
