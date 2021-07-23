@@ -16,7 +16,7 @@ function generateProductPage(product){
             <div class=product-image>
                 <img src="${product.imageUrl}" alt="${product.name}">
             </div>
-            <span class=product-price>$${product.price}</span>
+            <span id=product-price>$${product.price}</span>
             <form>
                 <label for="quantity" id=quantityLabel>Quantity</label>
                 <input type="number" id="quantity" name="quantity" value="1" min="1" max="5">
@@ -31,10 +31,9 @@ function generateProductPage(product){
     `
 }
 
-function updateTotalPrice(){
-    var price = document.getElementsByClassName('product-price')[0]
-    console.log(price)
-}
+
+
+
 
 
 window.addEventListener('load', async (event) => {
@@ -42,4 +41,14 @@ window.addEventListener('load', async (event) => {
     const product = await getProductById(params.id);
     const main = document.getElementsByTagName('main')[0];
     main.innerHTML = generateProductPage(product);
+
+    //create eventlistener for quantity
+    document.getElementById("quantity").addEventListener("change", updateTotalPrice);
+
+    function updateTotalPrice(){
+        var quantity  = document.getElementById("quantity").value;
+        document.getElementById("product-price").textContent = "$"+ (quantity * product.price).toFixed(2);
+       
+    }
 });
+

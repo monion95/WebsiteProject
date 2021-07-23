@@ -39,7 +39,7 @@
 }
 
 /*set text of product-price*/
-.product-price{
+#product-price{
     font-size: 35px;
     font-weight: bold;
     
