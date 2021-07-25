@@ -4,15 +4,35 @@ var filters={
     category:"nofilter",
     rating:"nofilter"
 }
-let products
+
+let products 
 window.addEventListener('load', async (event) => {
     const params = getQueryParameters();
     const searchKeyWord = params.q;
-    console.log(searchKeyWord);
+
     products = await search(searchKeyWord,filters)
-    const searchResult = document.getElementById('search-Result');
+    let searchResult = document.getElementById('search-Result');
     searchResult.innerHTML = BuildResultItems(products);
+    const filterArea = (document.getElementsByClassName("filters"))
+    filterArea[0].addEventListener("click",async function(){
+        filters.platform=document.querySelector('input[name="Platform"]:checked').value;
+        filters.price=document.querySelector('input[name="Price"]:checked').value;
+        filters.category=document.querySelector('input[name="Category"]:checked').value;
+        filters.rating=document.querySelector('input[name="Rating"]:checked').value;
+        console.log(filters)
+        await loadSearchResult(searchKeyWord,filters)
+        // products = await search(searchKeyWord,filters)
+        // searchResult = document.getElementById('search-Result');
+        // console.log(products)
+        // searchResult.innerHTML = BuildResultItems(products);
+    })
 });
+async function loadSearchResult(searchKeyWord,filters){
+    products =await search(searchKeyWord,filters)
+    searchResult = document.getElementById('search-Result')
+    console.log(products)
+    searchResult.innerHTML = BuildResultItems(products)
+}
 
 function BuildResultItems(products){
     let resultItems = "";
@@ -22,7 +42,11 @@ function BuildResultItems(products){
     return resultItems
 }
 
-const filterElements = document.getElementsByClassName(filterOption)
+
+// for (const filterElement of filterElements)
+// filterElement.addEventListener('click',(event)=>{
+//     alert('haha')
+// })
 
 function BuildResultItem(product){
     // document.title = product.name;
@@ -51,3 +75,4 @@ function BuildResultItem(product){
 //todo filter click event: change filters value and refresh result
 //todo add sort click event: 1 change icon 2 refresh result order
 //todo price change according to quantity
+// $("input[type='radio'][name='rate']:checked").val();
