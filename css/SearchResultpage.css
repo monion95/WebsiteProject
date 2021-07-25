@@ -2,30 +2,20 @@
 main {
   display: grid;
   grid-template-columns: 150px auto;
-  grid-template-rows: 40px auto;
+  grid-template-rows: 20px auto;
   grid-template-areas: "search-filter order-by""search-filter search-result";
 }
 
 /* set the style for order-by class */
 #order-by {
-  background-color: #eee;
-  margin: 0;
-  padding: 0;
-  display: flex;
+  /* background-color: #eee; */
+  margin: 10;
+  padding: 5;
+  display: right;
+  text-align: right;
+  vertical-align:auto;
 }
 
-#order-by>a {
-  color: black;
-  padding: 16px;
-  text-decoration: none;
-  width: auto;
-  display: flex;
-  align-items: center;
-}
-
-#order-by a:hover {
-  background-color: #ccc;
-}
 
 /* set the style for search-filter area  */
 #search-filter {
@@ -38,10 +28,7 @@ main {
   margin-bottom:10px;
   border: 1px;
   border-top: 1px solid rgb(83, 83, 83);
-  /* background-color: transparent;
-  display: block;
-  padding: 20px;
-  width: 100%; */
+
 }
 
 /* style for the search result components */

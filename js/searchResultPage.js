@@ -1,18 +1,19 @@
-var filters={
+// here gives initial value for filters and sortby
+let filters={
     platform:"nofilter",
     price:"nofilter",
     category:"nofilter",
     rating:"nofilter"
 }
+let sortby = "priceAsc"
 
-let products 
 window.addEventListener('load', async (event) => {
     const params = getQueryParameters();
     const searchKeyWord = params.q;
+    products =await search(searchKeyWord,filters,sortby)  
+    await loadSearchResult(products)
 
-    products = await search(searchKeyWord,filters)
-    let searchResult = document.getElementById('search-Result');
-    searchResult.innerHTML = BuildResultItems(products);
+    //add listener to filter, when user click, update filter
     const filterArea = (document.getElementsByClassName("filters"))
     filterArea[0].addEventListener("click",async function(){
         filters.platform=document.querySelector('input[name="Platform"]:checked').value;
@@ -20,20 +21,25 @@ window.addEventListener('load', async (event) => {
         filters.category=document.querySelector('input[name="Category"]:checked').value;
         filters.rating=document.querySelector('input[name="Rating"]:checked').value;
         console.log(filters)
-        await loadSearchResult(searchKeyWord,filters)
-        // products = await search(searchKeyWord,filters)
-        // searchResult = document.getElementById('search-Result');
-        // console.log(products)
-        // searchResult.innerHTML = BuildResultItems(products);
+        products =await search(searchKeyWord,filters,sortby)  
+        await loadSearchResult(products)
+    })
+
+    //add listener for sortby, when sort order change, update order of product
+    const sortbybox = document.getElementById("sortby")
+    sortbybox.addEventListener("change",async function(){
+        sortby =sortbybox.value;
+        products = await sortprducts(products,sortby)
+        await loadSearchResult(products)
     })
 });
-async function loadSearchResult(searchKeyWord,filters){
-    products =await search(searchKeyWord,filters)
+//this function reload current search result to page
+async function loadSearchResult(products){
     searchResult = document.getElementById('search-Result')
-    console.log(products)
     searchResult.innerHTML = BuildResultItems(products)
 }
 
+//this function build items then load to searchResult area of the page
 function BuildResultItems(products){
     let resultItems = "";
     for (const p of products) {
@@ -43,13 +49,8 @@ function BuildResultItems(products){
 }
 
 
-// for (const filterElement of filterElements)
-// filterElement.addEventListener('click',(event)=>{
-//     alert('haha')
-// })
-
+//this function build a single product item code.
 function BuildResultItem(product){
-    // document.title = product.name;
     return`
     <div class=result-item>
     <div class=product-image>
@@ -72,7 +73,3 @@ function BuildResultItem(product){
     </div>
     `
 }
-//todo filter click event: change filters value and refresh result
-//todo add sort click event: 1 change icon 2 refresh result order
-//todo price change according to quantity
-// $("input[type='radio'][name='rate']:checked").val();

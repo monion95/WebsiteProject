@@ -132,13 +132,16 @@ async function getProductById(id) {
     return idToProduct.get(Number(id));
 }
 
-/*search products*/
-async function search(keywords, filters) {
+/*search products with filters and sort order*/
+async function search(keywords, filters, sortby) {
+    //search according to keyword
     if (keywords==null){
         productFiltered = allProducts;
     } else{
         productFiltered = allProducts.filter((item)=>{return item.name.toUpperCase().includes(keywords.toUpperCase())});
     }
+
+    //filter search result
     if (filters.platform!='nofilter'){
         productFiltered = productFiltered.filter((item)=>{return item.platform.includes(filters.platform)}); 
     }
@@ -152,6 +155,28 @@ async function search(keywords, filters) {
         productFiltered = productFiltered.filter((item)=>{return item.rating==filters.rating}); 
     }
 
+    //sort search result
+    productFiltered = sortprducts(productFiltered,sortby)
+    return productFiltered
+}
+
+//sort products according to given order
+async function sortprducts(productFiltered,sortby){
+    if (sortby =="priceAsc"){
+        productFiltered.sort((a,b)=>{return a.price-b.price});
+    }
+    else if (sortby =="priceDes"){
+        productFiltered.sort((a,b)=>{return b.price-a.price});
+    }
+    else if (sortby =="alpAsc"){
+        productFiltered.sort((a,b)=>{if(b.name>a.name) return -1});
+    }
+    else if (sortby =="alpDes"){
+        productFiltered.sort((a,b)=>{if(b.name<a.name) return -1});
+    }
+    else if (sortby =="ratingDes"){
+        productFiltered.sort((a,b)=>{return b.rating-a.rating});
+    }
     return productFiltered
 }
 

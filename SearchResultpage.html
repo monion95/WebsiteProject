@@ -148,13 +148,15 @@
     </div>
     <!-- ordering option, default title alphabetical order-->
     <div id=order-by>
-        <!-- todo change to button                              -->
-        <a href="ps4.html">
-            Title
-            <img class="nav-icon" src="images/icons/sort-alpha-down.svg" alt="alpha-down">
-        </a>
-        <a href="ps4.html">Price</a>
-        <a href="console.html">Rating</a>
+
+        <label for="sortby">sort by:</label>
+        <select name="sortby" id="sortby">
+            <option value="priceAsc">price: low to high</option>
+            <option value="priceDes">price: high to low</option>
+            <option value="alpAsc">Alphabet ascending </option>
+            <option value="alpDes">Alphabet descending</option>
+            <option value="ratingDes">ratings: high to low</option>
+        </select>
     </div>
     <!-- Search results with image, title, price rating and platform-->
     <div id=search-Result>
