@@ -134,48 +134,52 @@ async function getProductById(id) {
 
 /*search products with filters and sort order*/
 async function search(keywords, filters, sortby) {
-    //search according to keyword
-    if (keywords==null){
-        productFiltered = allProducts;
-    } else{
-        productFiltered = allProducts.filter((item)=>{return item.name.toUpperCase().includes(keywords.toUpperCase())});
-    }
+    return allProducts.filter((item) => {
+        //search according to keyword
+        if (keywords && !item.name.toUpperCase().includes(keywords.toUpperCase())){
+            return false;
+        }
+        
+        // filter by platform
+        if (filters.platform !== 'nofilter' && item.platform !== filters.platform) {
+            return false;
+        }
+        
+        // filter by price
+        if (filters.price !== 'nofilter') {
+            const min = parseFloat(filters.price);
+            const max = min + 30;
+            if(item.price < min || item.price >= max){
+                return false;
+            }
+        }
+        
+        // filter by category
+        if (filters.category !== 'nofilter' && item.category !== filters.category) {
+            return false;
+        }
 
-    //filter search result
-    if (filters.platform!='nofilter'){
-        productFiltered = productFiltered.filter((item)=>{return item.platform.includes(filters.platform)}); 
-    }
-    if (filters.price!='nofilter'){
-        productFiltered = productFiltered.filter((item)=>{return (item.price>=parseFloat(filters.price))&&(item.price<30+parseFloat(filters.price))}); 
-    }
-    if (filters.category!='nofilter'){
-        productFiltered = productFiltered.filter((item)=>{return item.category.includes(filters.category)}); 
-    }
-    if (filters.rating!='nofilter'){
-        productFiltered = productFiltered.filter((item)=>{return item.rating==filters.rating}); 
-    }
-
-    //sort search result
-    productFiltered = sortprducts(productFiltered,sortby)
-    return productFiltered
+        // filter by rating
+        return filters.rating === 'nofilter' || item.rating >= filters.rating;
+    });
 }
 
 //sort products according to given order
 async function sortprducts(productFiltered,sortby){
     if (sortby =="priceAsc"){
-        productFiltered.sort((a,b)=>{return a.price-b.price});
+        productFiltered.sort((a,b) => {return a.price - b.price});
     }
     else if (sortby =="priceDes"){
-        productFiltered.sort((a,b)=>{return b.price-a.price});
+        productFiltered.sort((a,b) => {return b.price - a.price});
     }
     else if (sortby =="alpAsc"){
-        productFiltered.sort((a,b)=>{if(b.name>a.name) return -1});
+        productFiltered.sort((a,b) => a.name.localeCompare(b.name));
     }
     else if (sortby =="alpDes"){
-        productFiltered.sort((a,b)=>{if(b.name<a.name) return -1});
+        productFiltered.sort((a,b) => a.name.localeCompare(b.name)).reverse();
     }
     else if (sortby =="ratingDes"){
-        productFiltered.sort((a,b)=>{return b.rating-a.rating});
+        productFiltered.sort((a,b) => {return b.rating - a.rating});
     }
     return productFiltered
 }
