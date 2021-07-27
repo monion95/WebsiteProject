@@ -134,7 +134,7 @@ async function getProductById(id) {
 
 /*search products with filters and sort order*/
 async function search(keywords, filters, sortby) {
-    return allProducts.filter((item) => {
+    const productFiltered = allProducts.filter((item) => {
         //search according to keyword
         if (keywords && !item.name.toUpperCase().includes(keywords.toUpperCase())){
             return false;
@@ -162,6 +162,7 @@ async function search(keywords, filters, sortby) {
         // filter by rating
         return filters.rating === 'nofilter' || item.rating >= filters.rating;
     });
+    return sortprducts(productFiltered, sortby);
 }
 
 //sort products according to given order

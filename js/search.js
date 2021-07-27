@@ -20,7 +20,6 @@ window.addEventListener('load', async (event) => {
         filters.price=document.querySelector('input[name="Price"]:checked').value;
         filters.category=document.querySelector('input[name="Category"]:checked').value;
         filters.rating=document.querySelector('input[name="Rating"]:checked').value;
-        console.log(filters)
         products =await search(searchKeyWord,filters,sortby)  
         await loadSearchResult(products)
     })
