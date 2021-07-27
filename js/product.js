@@ -1,4 +1,16 @@
 function generateProductPage(product){
+    // display 404 error no product passed
+    if (!product) {
+        document.title = "404 Not Found";
+        return `
+<div>
+    <h1>404</h1>
+    <p>Page Not Found</p>
+    <p><a href="index.html">Return to home</a></p>
+</div>
+`;
+    }
+    
     //get product name from api
     document.title = product.name;
 
@@ -37,7 +49,7 @@ window.addEventListener('load', async (event) => {
 
     //declarations
     const params = getQueryParameters();
-    const product = await getProductById(params.id || 1);
+    const product = await getProductById(params.id);
     const main = document.getElementsByTagName('main')[0];
 
     //call generateProductPage to generate dynamic web content
