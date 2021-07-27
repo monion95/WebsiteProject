@@ -43,6 +43,7 @@ const ps5Games = [
     new Product(16, "WRC 10", 79.99, "PS5", "images/ps5/wrc10.jpg", "adventure", 4)
 ];
 
+// map product id to product
 const idToProduct = new Map();
 
 const allProducts = [];

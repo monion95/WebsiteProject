@@ -1,3 +1,4 @@
+// class storing one cart item info
 class CartItem {
     constructor(quantity, product) {
         this.quantity = quantity;
@@ -8,6 +9,8 @@ class CartItem {
         return this.quantity * this.product.price;
     }
 }
+
+// all products in the cart
 const cartItems = [
     new CartItem(1, switchGames[0]),
     new CartItem(2, ps4Games[0]),
@@ -15,6 +18,7 @@ const cartItems = [
     new CartItem(4, ps5Games[0]),
 ];
 
+// calculate total price of all products in the cart.
 const getTotalPrice = function(){
     let total = 0;
     for(const item of cartItems) {
@@ -23,7 +27,8 @@ const getTotalPrice = function(){
     return total;
 }
 
-const onQuantityChange = function(domElem, itemIndex){
+// when quantity change, update item price and total price
+function onQuantityChange(domElem, itemIndex){
     const item = cartItems[itemIndex];
     item.quantity = domElem.value;
     const itemPriceElem = domElem.parentNode.parentNode.querySelector('.cart-item-price');
@@ -87,7 +92,6 @@ function buildCartHtml(items) {
 </table>
 `
 }
-
 
 /*set content of cart*/
 window.addEventListener('load', () => {

@@ -32,16 +32,12 @@ function generateProductPage(product){
     `
 }
 
-
-
-
-
 // eventlistenner, load functions when page is loaded
 window.addEventListener('load', async (event) => {
 
     //declarations
     const params = getQueryParameters();
-    const product = await getProductById(params.id);
+    const product = await getProductById(params.id || 1);
     const main = document.getElementsByTagName('main')[0];
 
     //call generateProductPage to generate dynamic web content
