@@ -209,6 +209,12 @@ window.addEventListener('load', (event) => {
         quickSearch.addEventListener('change', (event) => {
             quickSearchLink.href = `search.html?q=${quickSearch.value}`;
         });
+        
+        quickSearch.addEventListener("keyup", (event) => {
+            if (event.key === "Enter"){
+                quickSearchLink.click();
+            }
+        });
     }
 });
 
