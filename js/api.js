@@ -34,26 +34,6 @@ async function search(query) {
   return resp.json();
 }
 
-//sort products according to given order
-async function sortprducts(productFiltered,sortby){
-    if (sortby =="priceAsc"){
-        productFiltered.sort((a,b) => {return a.price - b.price});
-    }
-    else if (sortby =="priceDes"){
-        productFiltered.sort((a,b) => {return b.price - a.price});
-    }
-    else if (sortby =="alpAsc"){
-        productFiltered.sort((a,b) => a.name.localeCompare(b.name));
-    }
-    else if (sortby =="alpDes"){
-        productFiltered.sort((a,b) => a.name.localeCompare(b.name)).reverse();
-    }
-    else if (sortby =="ratingDes"){
-        productFiltered.sort((a,b) => {return b.rating - a.rating});
-    }
-    return productFiltered
-}
-
 /*get query parameters of current page url*/
 function getQueryParameters() {
     const urlSearchParams = new URLSearchParams(window.location.search);

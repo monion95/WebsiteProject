@@ -20,8 +20,8 @@ function replyJson($data) {
   header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
   echo json_encode($data);
 }
-  $featured = [];
-function searchFeaturedProduct($platform){
+
+function searchFeaturedProducts($platform){
 
   global $mysqli;
   $result = $mysqli->query('SELECT * FROM Banner LIMIT 1');
@@ -89,9 +89,10 @@ function searchProducts($query) {
   $conditions = [];
   
   if (array_key_exists('keywords', $query)) {
-    $conditions[] = 'name COLLATE UTF8_GENERAL_CI LIKE ?';
+    $conditions[] = 'LOWER(name) LIKE ?';
     $bindTypes .= 's';
-    $bindArgs[]="%{$query['keywords']}%";
+    $lowerKeywords = strtolower($query['keywords']);
+    $bindArgs[]="%{$lowerKeywords}%";
   }
   
   if (array_key_exists('filters', $query)) {

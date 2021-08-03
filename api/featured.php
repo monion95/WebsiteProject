@@ -4,7 +4,8 @@ require 'private/utils.php';
 
 if($_SERVER["REQUEST_METHOD"] === 'GET'){
   $queryParams = getQueryParameters();
-  replyJson(searchFeaturedProduct($queryParams['platform'] ?? ''));
+  $featuredProducts = searchFeaturedProducts($queryParams['platform'] ?? '');
+  replyJson($featuredProducts);
 } else {
   http_response_code(400);
 }
