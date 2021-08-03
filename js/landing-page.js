@@ -3,7 +3,7 @@ function buildFeaturedItem(product) {
     return `
 <div class="featured-item">
     <div class="featured-item-body">
-        <a href="${product.url}">
+        <a href="${getProductPageUrl(product)}">
             <img class="featured-item-image" src="${product.imageUrl}" alt="${product.name}">
             <div class="featured-item-title">${product.name}</div>
         </a>
@@ -33,24 +33,16 @@ function buildFeaturedGroup(featuredGroup) {
 
 /*build html for all featured products of current page*/
 function buildFeaturedProducts(featuredProducts) {
-    let groups = "";
-    for(const group of featuredProducts.featuredGroups) {
-        groups += buildFeaturedGroup(group);
-    }
-    
-    let bannerUrl;
-    let bannerImageAlt;
-    if (featuredProducts.banner.product) {
-        bannerUrl = featuredProducts.banner.product.url;
-        bannerImageAlt = featuredProducts.banner.product.name;
-    } else {
-        bannerUrl = "";
-        bannerImageAlt = "banner";
-    }
-    
-    return `<div id="banner">
-    <a href="${bannerUrl}">
-        <img class="banner-image" src="${featuredProducts.banner.bannerimageUrl}" alt="${bannerImageAlt}">
+  const { banner, featuredGroups } = featuredProducts;
+  let groups = "";
+  for(const group of featuredGroups) {
+      groups += buildFeaturedGroup(group);
+  }
+
+  
+  return `<div id="banner">
+    <a href="${banner.pageUrl}">
+        <img class="banner-image" src="${banner.imageUrl}">
     </a>
 </div>
 <div id="featured">
@@ -60,7 +52,7 @@ function buildFeaturedProducts(featuredProducts) {
 
 /*set content of the main element after page load*/
 window.addEventListener('load', async (event) => {
-    const params = getQueryParameters();
-    const main = document.getElementsByTagName('main')[0];
-    main.innerHTML = buildFeaturedProducts(await getFeaturedProducts(params.platform));
+  const params = getQueryParameters();
+  const main = document.getElementsByTagName('main')[0];
+  main.innerHTML = buildFeaturedProducts(await getFeaturedProducts(params.platform));
 });

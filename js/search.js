@@ -1,39 +1,33 @@
-// here gives initial value for filters and sortby
-let filters={
-    platform:"nofilter",
-    price:"nofilter",
-    category:"nofilter",
-    rating:"nofilter"
-}
-let sortby = "priceAsc"
-
 window.addEventListener('load', async (event) => {
     const params = getQueryParameters();
-    const searchKeyWord = params.q;
-    products =await search(searchKeyWord,filters,sortby)  
-    await loadSearchResult(products)
+
+    const sortbybox = document.getElementById("sortby");
+    
+    async function updatePage(){
+      const query = {
+        keywords: params.q,
+        filters: {
+          platform: document.querySelector('input[name="Platform"]:checked').value,
+          price: document.querySelector('input[name="Price"]:checked').value,
+          category: document.querySelector('input[name="Category"]:checked').value,
+          rating: document.querySelector('input[name="Rating"]:checked').value,
+        },
+        sort: sortbybox.value,
+      };
+      const products = await search(query);  
+      await loadSearchResult(products);
+    }
+    updatePage();
 
     //add listener to filter, when user click, update filter
     const filterArea = (document.getElementsByClassName("filters"))
-    filterArea[0].addEventListener("click",async function(){
-        filters.platform=document.querySelector('input[name="Platform"]:checked').value;
-        filters.price=document.querySelector('input[name="Price"]:checked').value;
-        filters.category=document.querySelector('input[name="Category"]:checked').value;
-        filters.rating=document.querySelector('input[name="Rating"]:checked').value;
-        products =await search(searchKeyWord,filters,sortby)  
-        await loadSearchResult(products)
-    })
+    filterArea[0].addEventListener("click", updatePage);
 
     //add listener for sortby, when sort order change, update order of product
-    const sortbybox = document.getElementById("sortby")
-    sortbybox.addEventListener("change",async function(){
-        sortby =sortbybox.value;
-        products = await sortprducts(products,sortby)
-        await loadSearchResult(products)
-    })
+    sortbybox.addEventListener("change", updatePage)
 });
 //this function reload current search result to page
-async function loadSearchResult(products){
+function loadSearchResult(products){
     searchResult = document.getElementById('search-Result')
     searchResult.innerHTML = BuildResultItems(products)
 }
@@ -53,7 +47,7 @@ function BuildResultItem(product){
     return`
     <div class=result-item>
     <div class=product-image>
-        <a href="${product.url}">
+        <a href="${getProductPageUrl(product)}">
             <img src="${product.imageUrl}" alt="${product.name}" >
         </a>
     </div>

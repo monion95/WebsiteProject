@@ -45,7 +45,7 @@ function buildCartItemHtml(item, itemIndex) {
     return `
 <tr>
     <td class="cart-item-head">
-        <a href="${product.url}">
+        <a href="${getProductPageUrl(product)}">
             <div class="cart-item-image">
                 <img class="cart-item-image" src="${product.imageUrl}" alt="${product.name}">
             </div>
