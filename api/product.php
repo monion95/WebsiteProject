@@ -2,14 +2,23 @@
 
 require 'private/utils.php';
 
+function findProductById($id) {
+  global $mysqli;
+  $stmt = $mysqli->prepare("SELECT * FROM Product WHERE id = ?");
+  $stmt->bind_param("s", $id);
+  $stmt->execute();
+  $result = $stmt->get_result();
+  return $result->fetch_assoc();
+}
+
 switch ($_SERVER["REQUEST_METHOD"]) {
   case 'GET':
     $queryParams = getQueryParameters();
     $product = findProductById($queryParams['id'] ?? '');
     replyJson($product);
     break;
-  case 'POST':
-    createProduct(getJsonQueryBody());
+  default:
+    http_response_code(400);
     break;
 }
 
