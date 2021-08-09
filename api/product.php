@@ -1,6 +1,6 @@
 <?php
 
-require 'private/utils.php';
+require 'private/mysqli.php';
 
 function findProductById($id) {
   global $mysqli;
@@ -14,7 +14,7 @@ function findProductById($id) {
 switch ($_SERVER["REQUEST_METHOD"]) {
   case 'GET':
     $product = findProductById($_GET['id'] ?? '');
-    replyJson($product);
+    echo json_encode($product);
     break;
   default:
     http_response_code(400);

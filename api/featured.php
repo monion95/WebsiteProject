@@ -1,6 +1,6 @@
 <?php
 
-require 'private/utils.php';
+require 'private/mysqli.php';
 
 function searchFeaturedProducts($platform){
 
@@ -48,7 +48,7 @@ function searchFeaturedProducts($platform){
 
 if($_SERVER["REQUEST_METHOD"] === 'GET'){
   $featuredProducts = searchFeaturedProducts($_GET['platform'] ?? '');
-  replyJson($featuredProducts);
+  echo json_encode($featuredProducts);
 } else {
   http_response_code(400);
 }

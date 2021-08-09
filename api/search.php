@@ -1,6 +1,6 @@
 <?php
 
-require 'private/utils.php';
+require 'private/mysqli.php';
 
 function searchProducts($query) {
   $sql = ['SELECT * FROM Product'];
@@ -82,9 +82,9 @@ function searchProducts($query) {
 }
 
 if($_SERVER["REQUEST_METHOD"] === 'POST'){
-  $query = getJsonQueryBody();
+  $query = json_decode(file_get_contents('php://input'), true);
   $products = searchProducts($query);
-  replyJson($products);
+  echo json_encode($products);
 } else {
   http_response_code(400);
 }
