@@ -13,8 +13,7 @@ function findProductById($id) {
 
 switch ($_SERVER["REQUEST_METHOD"]) {
   case 'GET':
-    $queryParams = getQueryParameters();
-    $product = findProductById($queryParams['id'] ?? '');
+    $product = findProductById($_GET['id'] ?? '');
     replyJson($product);
     break;
   default:
