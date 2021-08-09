@@ -1,3 +1,5 @@
+USE EagerGamers;
+
 INSERT INTO Product VALUES (1, 'Mario Kart 8 Deluxe', 79.99, 'images/switch/mk8.jpg', 3, 'Switch', 'sports', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At varius vel pharetra vel. Magna etiam tempor orci eu lobortis elementum nibh tellus molestie. Lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci.');
 
 INSERT INTO Product VALUES (2, 'Super Mario Odyssey', 59.99, 'images/switch/modyssey.jpg', 4, 'Switch', 'sports', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At varius vel pharetra vel. Magna etiam tempor orci eu lobortis elementum nibh tellus molestie. Lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci.');
