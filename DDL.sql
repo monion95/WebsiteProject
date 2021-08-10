@@ -1,4 +1,4 @@
-
+-- Database: `EagerGamers` and php web application use
 CREATE DATABASE IF NOT EXISTS EagerGamers;
 GRANT USAGE ON *.* TO 'appuser'@'localhost' IDENTIFIED BY 'EtcK3zoh7wVdVaRk9ctz9DKpVCMJWU11';
 GRANT ALL PRIVILEGES ON EagerGamers.* TO 'appuser'@'localhost';
@@ -6,6 +6,7 @@ FLUSH PRIVILEGES;
 
 USE EagerGamers;
 
+-- Table for Products
 CREATE TABLE IF NOT EXISTS Product(
   id INT PRIMARY KEY AUTO_INCREMENT,
   name VARCHAR(100) NOT NULL,
@@ -17,6 +18,7 @@ CREATE TABLE IF NOT EXISTS Product(
   description TEXT NOT NULL
 );
 
+-- Table for banners
 CREATE TABLE IF NOT EXISTS Banner (
   pageUrl VARCHAR(255) NOT NULL,
   imageUrl VARCHAR(255) NOT NULL,
