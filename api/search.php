@@ -1,13 +1,16 @@
 <?php
-
+// connect to database
 require 'private/mysqli.php';
 
+// function that includes searching, filtering and sorting
 function searchProducts($query) {
+  // initial parameters
   $sql = ['SELECT * FROM Product'];
   $bindTypes = '';
   $bindArgs = [];
   $conditions = [];
   
+  // search with keywords (case insensitive)
   if (array_key_exists('keywords', $query)) {
     $conditions[] = 'LOWER(name) LIKE ?';
     $bindTypes .= 's';
@@ -15,6 +18,7 @@ function searchProducts($query) {
     $bindArgs[]="%{$lowerKeywords}%";
   }
   
+  //generate filters
   if (array_key_exists('filters', $query)) {
     foreach($query['filters'] as $filter => $value) {
       if($value === '') {
@@ -48,10 +52,13 @@ function searchProducts($query) {
     }
   }
   
+
+  // generate where statement with search keyword and filters
   if ($conditions) {
     $sql[] = "WHERE ". implode(' AND ', $conditions);
   }
 
+  //sort product by given order
   switch($query['sort'] ?? 'priceAsc') {
      case 'priceAsc':
         $sql[] = 'ORDER BY price ASC';
@@ -70,7 +77,10 @@ function searchProducts($query) {
       break;
   }
   
+  //maximum 20 record shown in one page
   $sql[] = 'LIMIT 20';
+
+  //send query and fetch data from database
   global $mysqli;
   $stmt = $mysqli->prepare(implode(' ', $sql));
   if ($bindArgs) {
@@ -81,6 +91,7 @@ function searchProducts($query) {
   return $result->fetch_all(MYSQLI_ASSOC);
 }
 
+//reply search result with filters and sorting to front end;
 if($_SERVER["REQUEST_METHOD"] === 'POST'){
   $query = json_decode(file_get_contents('php://input'), true);
   $products = searchProducts($query);
