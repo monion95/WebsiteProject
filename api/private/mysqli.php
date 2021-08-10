@@ -1,5 +1,4 @@
 <?php
-/* Host name of the MySQL server */
 
 require 'config.php';
 
