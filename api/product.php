@@ -19,8 +19,9 @@ function findProductById($id) {
 }
 
 
-/* response to method, including GET method or 
- * default case gives error page with code 400 */
+/* response to method, if GET method detected, return product in 
+ * JSON format 
+ * */
 
 if ($_SERVER["REQUEST_METHOD"]==='GET'){
   $product = findProductById($_GET['id'] ?? '');
